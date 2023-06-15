@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/06/15 09:39:31 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/06/15 10:46:08 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,11 @@ typedef struct s_stack
 	struct s_node	*tail;
 }	t_stack;
 
-typedef struct s_ps
+typedef struct s_pushswap
 {
 	struct s_stack	*a_stack;
 	struct s_stack	*b_stack;
-}	t_ps;
+}	t_pushswap;
 
 int				ft_atoi(const char	*str, int *overflow);
 char			**ft_split(char const *s, char c);

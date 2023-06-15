@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/06/15 09:40:27 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/06/15 10:47:15 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,21 +118,21 @@ int	ft_has_doubles(int *stack, int size)
 	return (0);
 }
 
-int	main(int ac, char **av)
-{
-	int	*stack;
-	int	size;
-	int	i;
+// int	main(int ac, char **av)
+// {
+// 	int	*stack;
+// 	int	size;
+// 	int	i;
 
-	if (ac < 2)
-		ft_errors(1);
-	if (ac == 2)
-		stack = ft_string_to_stack(av[1], &size);
-	if (ac > 2)
-		stack = ft_args_to_stack(ac, &*av, &size);
-	if (ft_has_doubles(stack, size))
-		ft_errors(1);
-	i = -1;
-	while (++i < size)
-		printf("%i\n", stack[i]);
-}
+// 	if (ac < 2)
+// 		ft_errors(1);
+// 	if (ac == 2)
+// 		stack = ft_string_to_stack(av[1], &size);
+// 	if (ac > 2)
+// 		stack = ft_args_to_stack(ac, &*av, &size);
+// 	if (ft_has_doubles(stack, size))
+// 		ft_errors(1);
+// 	i = -1;
+// 	while (++i < size)
+// 		printf("%i\n", stack[i]);
+// }
