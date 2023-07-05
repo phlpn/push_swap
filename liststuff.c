@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/05 10:01:32 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/05 11:14:10 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_init_stack(void)
+t_stack	*ft_new_stack(void)
 {
 	t_stack	*new_stack;
 
@@ -24,19 +24,23 @@ t_stack	*ft_init_stack(void)
 	return (new_stack);
 }
 
-t_pushswap	*ft_init_structs(void)
+t_stacks	*ft_init_stacks(void)
 {
-	t_pushswap	*pushswap;
+	t_stacks	*stacks;
 
-	pushswap = malloc(sizeof(t_pushswap));
-	if (!pushswap)
+	stacks = malloc(sizeof(t_stacks));
+	if (!stacks)
 		ft_errors(3);
-	pushswap->a_stack = ft_init_stack();
-	pushswap->b_stack = ft_init_stack();
-	return (pushswap);
+	stacks->a = ft_init_stack();
+	stacks->b = ft_init_stack();
+	return (stacks);
 }
 
-ft_array_to_linked_list(int *array)
+void	ft_link_list(int *array, int *size, t_stack *stack)
 {
-	
+	int	i;
+
+	i = -1;
+	while (++i < *size)
+		insert_end(array[i], &stack);
 }

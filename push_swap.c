@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/05 09:52:05 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/05 11:40:20 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,9 +120,10 @@ int	ft_has_doubles(int *stack, int size)
 
 int	main(int ac, char **av)
 {
-	int	*stack;
-	int	size;
-	int	i;
+	t_stacks	*stacks;
+	int			*stack;
+	int			size;
+	int			i;
 
 	if (ac < 2)
 		ft_errors(1);
@@ -132,5 +133,7 @@ int	main(int ac, char **av)
 		stack = ft_args_to_stack(ac, &*av, &size);
 	if (ft_has_doubles(stack, size))
 		ft_errors(1);
-	// Convert current stack (array) into a linked list here
+	stacks = ft_init_stacks();
+	ft_link_list(stack, &size, stacks);
+	free(stack);
 }
