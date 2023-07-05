@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/04 14:19:59 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/05 09:52:05 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,13 +126,11 @@ int	main(int ac, char **av)
 
 	if (ac < 2)
 		ft_errors(1);
-	if (ac == 2)
+	else if (ac == 2)
 		stack = ft_string_to_stack(av[1], &size);
-	if (ac > 2)
+	else if (ac > 2)
 		stack = ft_args_to_stack(ac, &*av, &size);
 	if (ft_has_doubles(stack, size))
 		ft_errors(1);
-	i = -1;
-	while (++i < size)
-		printf("%i\n", stack[i]);
+	// Convert current stack (array) into a linked list here
 }

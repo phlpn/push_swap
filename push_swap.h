@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/06/15 10:46:08 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/05 09:42:57 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 typedef struct s_node
 {
 	int				value;
-	struct s_node	*next;
 	struct s_node	*prev;
+	struct s_node	*next;
 }	t_node;
 
 typedef struct s_stack
