@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 12:22:46 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:47:29 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,10 +52,31 @@ int			main(int ac, char **av);
 char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
+/* Initializing structures and linked lists */
 t_stack		*ft_new_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_list(int value, t_stacks **stacks);
 
+/* Swap Ops */
+void		ft_sa(t_stacks **stacks);
+void		ft_sb(t_stacks **stacks);
+void		ft_ss(t_stacks **stacks);
+
+/* Push Ops */
+void		ft_pa(t_stacks **stacks);
+void		ft_pb(t_stacks **stacks);
+
+/* Rotate Ops */
+void		ft_ra(t_stacks **stacks);
+void		ft_rb(t_stacks **stacks);
+void		ft_rr(t_stacks **stacks);
+
+/* Reverse Rotate Ops */
+void		ft_rra(t_stacks **stacks);
+void		ft_rrb(t_stacks **stacks);
+void		ft_rrr(t_stacks **stacks);
+
+/* Error Management */
 void		ft_errors(int code);
 
 #endif
