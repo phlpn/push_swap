@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 14:12:02 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:41:14 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_stack	*ft_new_stack(void)
 
 	new_stack = malloc(sizeof(t_stack));
 	if (!new_stack)
-		ft_errors(3);
+		ft_errors(2);
 	new_stack->head = NULL;
 	new_stack->tail = NULL;
 	return (new_stack);
@@ -30,7 +30,7 @@ t_stacks	*ft_init_stacks(void)
 
 	stacks = malloc(sizeof(t_stacks));
 	if (!stacks)
-		ft_errors(3);
+		ft_errors(2);
 	stacks->a = ft_new_stack();
 	stacks->b = ft_new_stack();
 	return (stacks);
@@ -43,7 +43,7 @@ void	ft_linked_list(int value, t_stacks **stacks)
 
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
-		ft_errors(1);
+		ft_errors(2);
 	stack = (*stacks)->a;
 	new_node->value = value;
 	if (!stack->head)
