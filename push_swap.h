@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 14:47:29 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:55:54 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include <stdlib.h>
 # include <limits.h>
 
-# include <stdio.h> //////////// DEBUG ////////////
+////// DEBUG //////
+# include <stdio.h> 
+////// DEBUG //////
 
 typedef struct s_node
 {
@@ -52,7 +54,7 @@ int			main(int ac, char **av);
 char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-/* Initializing structures and linked lists */
+/* Structures / Linked Lists Initialization */
 t_stack		*ft_new_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_list(int value, t_stacks **stacks);
