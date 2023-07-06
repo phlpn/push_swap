@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 16:55:54 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:57:55 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,31 +54,31 @@ int			main(int ac, char **av);
 char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-/* Structures / Linked Lists Initialization */
+// Structures and Linked Lists Initialization
 t_stack		*ft_new_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_list(int value, t_stacks **stacks);
 
-/* Swap Ops */
+// Swap Ops
 void		ft_sa(t_stacks **stacks);
 void		ft_sb(t_stacks **stacks);
 void		ft_ss(t_stacks **stacks);
 
-/* Push Ops */
+// Push Ops
 void		ft_pa(t_stacks **stacks);
 void		ft_pb(t_stacks **stacks);
 
-/* Rotate Ops */
+// Rotate Ops
 void		ft_ra(t_stacks **stacks);
 void		ft_rb(t_stacks **stacks);
 void		ft_rr(t_stacks **stacks);
 
-/* Reverse Rotate Ops */
+// Reverse Rotate Ops
 void		ft_rra(t_stacks **stacks);
 void		ft_rrb(t_stacks **stacks);
 void		ft_rrr(t_stacks **stacks);
 
-/* Error Management */
+// Error Management
 void		ft_errors(int code);
 
 #endif
