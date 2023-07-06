@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/05 11:40:20 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 10:24:26 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,6 +134,8 @@ int	main(int ac, char **av)
 	if (ft_has_doubles(stack, size))
 		ft_errors(1);
 	stacks = ft_init_stacks();
-	ft_link_list(stack, &size, stacks);
+	i = -1;
+	while (++i < size)
+		ft_linked_list(stack[i], &stacks);
 	free(stack);
 }

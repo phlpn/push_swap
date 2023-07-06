@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/05 11:13:18 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 12:22:46 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 # include <stdlib.h>
 # include <limits.h>
-# include <stdio.h> /// DEBUG ///
+
+# include <stdio.h> //////////// DEBUG ////////////
 
 typedef struct s_node
 {
@@ -53,7 +54,7 @@ size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 t_stack		*ft_new_stack(void);
 t_stacks	*ft_init_stacks(void);
-void		ft_link_list(int *array, int *size, t_stack *stacks);
+void		ft_linked_list(int value, t_stacks **stacks);
 
 void		ft_errors(int code);
 

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/05 11:14:10 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 14:12:02 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,34 @@ t_stacks	*ft_init_stacks(void)
 	stacks = malloc(sizeof(t_stacks));
 	if (!stacks)
 		ft_errors(3);
-	stacks->a = ft_init_stack();
-	stacks->b = ft_init_stack();
+	stacks->a = ft_new_stack();
+	stacks->b = ft_new_stack();
 	return (stacks);
 }
 
-void	ft_link_list(int *array, int *size, t_stack *stack)
+void	ft_linked_list(int value, t_stacks **stacks)
 {
-	int	i;
+	t_node	*new_node;
+	t_stack	*stack;
 
-	i = -1;
-	while (++i < *size)
-		insert_end(array[i], &stack);
+	new_node = malloc(sizeof(t_node));
+	if (!new_node)
+		ft_errors(1);
+	stack = (*stacks)->a;
+	new_node->value = value;
+	if (!stack->head)
+	{
+		new_node->prev = new_node;
+		new_node->next = new_node;
+		stack->head = new_node;
+		stack->tail = new_node;
+	}
+	else
+	{
+		new_node->next = stack->head;
+		new_node->prev = stack->tail;
+		stack->tail->next = new_node;
+		stack->head->prev = new_node;
+		stack->tail = new_node;
+	}
 }
