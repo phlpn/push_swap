@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 10:24:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/06 16:36:27 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ int	*ft_string_to_stack(char *s, int *size)
 	ft_correct_str_input(s);
 	*size = ft_count_numbers(s);
 	if (*size == 1)
-		exit(0);
+		ft_errors(0);
 	tmp = ft_split(s, ' ');
 	if (!tmp)
 		ft_errors(2);
@@ -83,7 +83,7 @@ int	*ft_args_to_stack(int ac, char **av, int *size)
 
 	*size = ac - 1;
 	if (*size == 1)
-		exit(0);
+		ft_errors(0);
 	i = -1;
 	overflow = 0;
 	stack = malloc(*size * sizeof(int));
@@ -138,4 +138,5 @@ int	main(int ac, char **av)
 	while (++i < size)
 		ft_linked_list(stack[i], &stacks);
 	free(stack);
+	printf("%i\n", stacks->a->head->value);
 }
