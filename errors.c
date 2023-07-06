@@ -14,9 +14,11 @@
 
 void	ft_errors(int code)
 {
+	if (code == 0)
+		printf("INPUT: A single element is considered as already sorted.\n");
 	if (code == 1)
-		printf("ERROR: Fucked up input, shit head.\n");
+		printf("INPUT: Fucked up input, shit head.\n");
 	if (code == 2)
-		printf("ERROR: A memory allocation failed.\n");
+		printf("MALLOC: A memory allocation failed.\n");
 	exit(code);
 }
