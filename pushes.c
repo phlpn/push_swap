@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 13:19:20 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/07 09:01:25 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	ft_pb(t_stacks **stacks)
 	a->head = a->head->next;
 	a->head->prev = a->tail;
 	a->tail->next = a->head;
-	b->head->prev = push;
+	b->head->prev = push; // SEGFAULT
 	push->next = b->head;
 	push->prev = b->tail;
 	b->head = push;
