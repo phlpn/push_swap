@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 16:57:55 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 15:36:18 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@
 ////// DEBUG //////
 # include <stdio.h> 
 ////// DEBUG //////
+
+// Structures
 
 typedef struct s_node
 {
@@ -54,7 +56,7 @@ int			main(int ac, char **av);
 char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
-// Structures and Linked Lists Initialization
+// Linked Lists Initialization
 t_stack		*ft_new_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_list(int value, t_stacks **stacks);
@@ -67,6 +69,8 @@ void		ft_ss(t_stacks **stacks);
 // Push Ops
 void		ft_pa(t_stacks **stacks);
 void		ft_pb(t_stacks **stacks);
+t_node		*ft_shift(t_stack *stack);
+void		ft_unshift(t_node *push, t_stack *stack);
 
 // Rotate Ops
 void		ft_ra(t_stacks **stacks);
@@ -80,5 +84,11 @@ void		ft_rrr(t_stacks **stacks);
 
 // Error Management
 void		ft_errors(int code);
+
+//////////////////////  D  E B  U  G  ////////////////////////////
+void		print_stack_a(t_stacks *stacks);
+void		print_stack_b(t_stacks *stacks);
+void		print_stacks(t_stacks *stacks);
+//////////////////////  D  E B  U  G  ////////////////////////////
 
 #endif
