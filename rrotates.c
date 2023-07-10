@@ -32,6 +32,6 @@ void	ft_rrb(t_stacks **stacks)
 
 void	ft_rrr(t_stacks **stacks)
 {
-	ft_ra(*stacks);
-	ft_rb(*stacks);
+	ft_rra(stacks);
+	ft_rrb(stacks);
 }
