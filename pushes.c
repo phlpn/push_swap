@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 17:33:53 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:39:38 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_node	*ft_shift(t_stack *stack)
 		stack->head = NULL;
 		stack->tail = NULL;
 	}
-	return push;
+	return (push);
 }
 
 // Adds a new node to the beginning of a doubly circular linked list

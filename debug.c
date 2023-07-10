@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 17:33:10 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:39:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	print_stack(t_stack	*stack)
 {
 	t_node	*current;
-	
+
 	current = stack->head;
 	while (1)
 	{
