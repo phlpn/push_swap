@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 15:01:54 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:06:13 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,25 @@
 
 void	ft_sa(t_stacks **stacks)
 {
-	t_node	*first;
-	t_node	*second;
-	int		tmp;
-
-	first = (*stacks)->a->head;
-	second = first->next;
-	tmp = first->value;
-	first->value = second->value;
-	second->value = tmp;
+	ft_swap((*stacks)->a);
 }
 
 void	ft_sb(t_stacks **stacks)
 {
-	t_node	*first;
-	t_node	*second;
-	int		tmp;
-
-	first = (*stacks)->b->head;
-	second = first->next;
-	tmp = first->value;
-	first->value = second->value;
-	second->value = tmp;
+	ft_swap((*stacks)->b);
 }
 
 void	ft_ss(t_stacks **stacks)
 {
 	ft_sa(stacks);
 	ft_sb(stacks);
+}
+
+void	ft_swap(t_stack *stack)
+{
+	int	tmp;
+
+	tmp = stack->head->value;
+	stack->head->value = stack->head->next->value;
+	stack->head->next->value = tmp;
 }

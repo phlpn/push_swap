@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 15:36:18 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:07:47 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <stdlib.h>
 # include <limits.h>
 
-////// DEBUG //////
+//////  D  E  B  U  G  //////
 # include <stdio.h> 
-////// DEBUG //////
+//////  D  E  B  U  G  //////
 
 // Structures
 
@@ -65,6 +65,7 @@ void		ft_linked_list(int value, t_stacks **stacks);
 void		ft_sa(t_stacks **stacks);
 void		ft_sb(t_stacks **stacks);
 void		ft_ss(t_stacks **stacks);
+void		ft_swap(t_stack *stack);
 
 // Push Ops
 void		ft_pa(t_stacks **stacks);
@@ -76,11 +77,13 @@ void		ft_unshift(t_node *push, t_stack *stack);
 void		ft_ra(t_stacks **stacks);
 void		ft_rb(t_stacks **stacks);
 void		ft_rr(t_stacks **stacks);
+void		ft_rot(t_stack *stack);
 
 // Reverse Rotate Ops
 void		ft_rra(t_stacks **stacks);
 void		ft_rrb(t_stacks **stacks);
 void		ft_rrr(t_stacks **stacks);
+void		ft_rrot(t_stack *stack);
 
 // Error Management
 void		ft_errors(int code);
