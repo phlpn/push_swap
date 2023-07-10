@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/07 08:39:44 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:08:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,14 +138,25 @@ int	main(int ac, char **av)
 	while (++i < size)
 		ft_linked_list(stack[i], &stacks);
 	free(stack);
-	ft_pb(&stacks);
-	t_node	*current = stacks->a->head;
-	while (1)
-	{
-		printf("%i\n", current->value);
-		if (current == stacks->a->tail)
-			break ;
-		current = current->next;
-	}
-	// printf("Head of stack B: %i\n", stacks->b->head->value);
+	print_stacks(stacks);
+	ft_sa(&stacks), printf("== SA ==\n");
+	print_stacks(stacks);
+	ft_pb(&stacks), printf("== PB ==\n");
+	print_stacks(stacks);
+	ft_pb(&stacks), printf("== PB ==\n");
+	print_stacks(stacks);
+	ft_pb(&stacks), printf("== PB ==\n");
+	print_stacks(stacks);
+	ft_rr(&stacks), printf("== RR ==\n");
+	print_stacks(stacks);
+	ft_rrr(&stacks), printf("== RRR ==\n");
+	print_stacks(stacks);
+	ft_sa(&stacks), printf("== SA ==\n");
+	print_stacks(stacks);
+	ft_pa(&stacks), printf("== PA ==\n");
+	print_stacks(stacks);
+	ft_pa(&stacks), printf("== PA ==\n");
+	print_stacks(stacks);
+	ft_pa(&stacks), printf("== PA ==\n");
+	print_stacks(stacks);
 }
