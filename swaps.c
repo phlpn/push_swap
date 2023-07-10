@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 15:45:15 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 15:01:54 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ void	ft_sb(t_stacks **stacks)
 
 void	ft_ss(t_stacks **stacks)
 {
-	ft_sa(*stacks);
-	ft_sb(*stacks);
+	ft_sa(stacks);
+	ft_sb(stacks);
 }
