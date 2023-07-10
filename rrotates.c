@@ -12,6 +12,13 @@
 
 #include "push_swap.h"
 
+
+void	ft_rrot(t_stack *stack)
+{
+	stack->head = stack->head->prev;
+	stack->tail = stack->tail->prev;
+}
+
 void	ft_rra(t_stacks **stacks)
 {
 	ft_rrot((*stacks)->a);
@@ -26,10 +33,4 @@ void	ft_rrr(t_stacks **stacks)
 {
 	ft_rra(stacks);
 	ft_rrb(stacks);
-}
-
-void	ft_rrot(t_stack *stack)
-{
-	stack->head = stack->head->prev;
-	stack->tail = stack->tail->prev;
 }

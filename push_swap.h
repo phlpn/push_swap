@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 17:07:47 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:29:45 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,7 @@ void		ft_errors(int code);
 void		print_stack_a(t_stacks *stacks);
 void		print_stack_b(t_stacks *stacks);
 void		print_stacks(t_stacks *stacks);
+void		print_stack(t_stack	*stack);
 //////////////////////  D  E B  U  G  ////////////////////////////
 
 #endif

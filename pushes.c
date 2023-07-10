@@ -6,21 +6,11 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 16:23:36 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:33:53 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_pa(t_stacks **stacks)
-{
-	ft_unshift(ft_shift((*stacks)->b), (*stacks)->a);
-}
-
-void	ft_pb(t_stacks **stacks)
-{
-	ft_unshift(ft_shift((*stacks)->a), (*stacks)->b);
-}
 
 // Removes the first node of a doubly circular linked list and returns it
 t_node	*ft_shift(t_stack *stack)
@@ -60,4 +50,14 @@ void	ft_unshift(t_node *push, t_stack *stack)
 		push->prev = push;
 		push->next = push;
 	}
+}
+
+void	ft_pa(t_stacks **stacks)
+{
+	ft_unshift(ft_shift((*stacks)->b), (*stacks)->a);
+}
+
+void	ft_pb(t_stacks **stacks)
+{
+	ft_unshift(ft_shift((*stacks)->a), (*stacks)->b);
 }

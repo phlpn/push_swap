@@ -6,11 +6,34 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 17:30:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 17:33:10 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	print_stack(t_stack	*stack)
+{
+	t_node	*current;
+	
+	current = stack->head;
+	while (1)
+	{
+		printf("%i < %i > %i",
+			current->prev->value, current->value, current->next->value);
+		if (current == stack->head && current == stack->tail)
+			printf("\tHEAD & TAIL\n");
+		else if (current == stack->head)
+			printf("\tHEAD\n");
+		else if (current == stack->tail)
+			printf("\tTAIL\n");
+		else
+			printf("\n");
+		if (current == stack->tail)
+			break ;
+		current = current->next;
+	}
+}
 
 void	print_stack_a(t_stacks *stacks)
 {
@@ -38,27 +61,4 @@ void	print_stacks(t_stacks *stacks)
 {
 	print_stack_a(stacks);
 	print_stack_b(stacks);
-}
-
-void	print_stack(t_stack	*stack)
-{
-	t_node	*current;
-	
-	current = stack->head;
-	while (1)
-	{
-		printf("%i < %i > %i",
-			current->prev->value, current->value, current->next->value);
-		if (current == stack->head && current == stack->tail)
-			printf("\tHEAD & TAIL\n");
-		else if (current == stack->head)
-			printf("\tHEAD\n");
-		else if (current == stack->tail)
-			printf("\tTAIL\n");
-		else
-			printf("\n");
-		if (current == stack->tail)
-			break ;
-		current = current->next;
-	}
 }
