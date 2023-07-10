@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/07 09:01:25 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/10 16:23:36 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,40 +14,50 @@
 
 void	ft_pa(t_stacks **stacks)
 {
-	t_stack	*b;
-	t_stack	*a;
-	t_node	*push;
-
-	b = (*stacks)->b;
-	if (!b->head)
-		return ;
-	push = b->head;
-	a = (*stacks)->a;
-	b->head = b->head->next;
-	b->head->prev = b->tail;
-	b->tail->next = b->head;
-	a->head->prev = push;
-	push->next = a->head;
-	push->prev = a->tail;
-	a->head = push;
+	ft_unshift(ft_shift((*stacks)->b), (*stacks)->a);
 }
 
 void	ft_pb(t_stacks **stacks)
 {
-	t_stack	*a;
-	t_stack	*b;
+	ft_unshift(ft_shift((*stacks)->a), (*stacks)->b);
+}
+
+// Removes the first node of a doubly circular linked list and returns it
+t_node	*ft_shift(t_stack *stack)
+{
 	t_node	*push;
 
-	a = (*stacks)->a;
-	if (!a->head)
-		return ;
-	push = a->head;
-	b = (*stacks)->b;
-	a->head = a->head->next;
-	a->head->prev = a->tail;
-	a->tail->next = a->head;
-	b->head->prev = push; // SEGFAULT
-	push->next = b->head;
-	push->prev = b->tail;
-	b->head = push;
+	push = stack->head;
+	if (stack->head != stack->tail)
+	{
+		stack->head = stack->head->next;
+		stack->head->prev = stack->tail;
+		stack->tail->next = stack->head;
+	}
+	else
+	{
+		stack->head = NULL;
+		stack->tail = NULL;
+	}
+	return push;
+}
+
+// Adds a new node to the beginning of a doubly circular linked list
+void	ft_unshift(t_node *push, t_stack *stack)
+{
+	if (stack->head)
+	{	
+		push->next = stack->head;
+		push->prev = stack->tail;
+		stack->head->prev = push;
+		stack->tail->next = push;
+		stack->head = push;
+	}
+	else
+	{
+		stack->head = push;
+		stack->tail = push;
+		push->prev = push;
+		push->next = push;
+	}
 }
