@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_input                                        :+:      :+:    :+:   */
+/*   utils_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:36:54 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:45:25 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 12:14:01 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,23 +31,6 @@ int	ft_correct_str_input(char *s)
 	return (1);
 }
 
-int	ft_count_numbers(char *s)
-{
-	int	x;
-
-	x = 0;
-	while (*s)
-	{
-		if (ft_is_digit(*s))
-			x++;
-		while (ft_is_digit(*s))
-			s++;
-		while (*s == ' ' || *s == '-')
-			s++;
-	}
-	return (x);
-}
-
 int	ft_has_doubles(int *stack, int size)
 {
 	int	i;
@@ -67,6 +50,7 @@ int	ft_has_doubles(int *stack, int size)
 	}
 	return (0);
 }
+
 int	*ft_string_to_stack(char *s, int *size)
 {
 	char	**tmp;
@@ -115,4 +99,21 @@ int	*ft_args_to_stack(int ac, char **av, int *size)
 	if (overflow)
 		ft_errors(1);
 	return (stack);
+}
+
+int	ft_count_numbers(char *s)
+{
+	int	x;
+
+	x = 0;
+	while (*s)
+	{
+		if (ft_is_digit(*s))
+			x++;
+		while (ft_is_digit(*s))
+			s++;
+		while (*s == ' ' || *s == '-')
+			s++;
+	}
+	return (x);
 }

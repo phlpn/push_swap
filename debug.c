@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:15:23 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 12:05:43 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,30 @@ void	print_stacks(t_stacks *stacks)
 {
 	print_stack_a(stacks);
 	print_stack_b(stacks);
+}
+
+// To use with "2 1 3 6 5 8"
+void	ft_subject_exemple(t_stacks **stacks)
+{
+	print_stacks(*stacks);
+	ft_sa(stacks);
+	print_stacks(*stacks);
+	ft_pb(stacks);
+	print_stacks(*stacks);
+	ft_pb(stacks);
+	print_stacks(*stacks);
+	ft_pb(stacks);
+	print_stacks(*stacks);
+	ft_rr(stacks);
+	print_stacks(*stacks);
+	ft_rrr(stacks);
+	print_stacks(*stacks);
+	ft_sa(stacks);
+	print_stacks(*stacks);
+	ft_pa(stacks);
+	print_stacks(*stacks);
+	ft_pa(stacks);
+	print_stacks(*stacks);
+	ft_pa(stacks);
+	print_stacks(*stacks);
 }

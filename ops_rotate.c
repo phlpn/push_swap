@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:29:21 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:14:36 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 12:04:30 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,5 @@ void	ft_rr(t_stacks **stacks)
 {
 	ft_ra(stacks);
 	ft_rb(stacks);
+	printf("== RR ==\n");
 }

@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:42:30 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:50:47 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ft_new_stack(void)
+t_stack	*ft_init_stack(void)
 {
 	t_stack	*new_stack;
 
@@ -32,8 +32,8 @@ t_stacks	*ft_init_stacks(void)
 	stacks = malloc(sizeof(t_stacks));
 	if (!stacks)
 		ft_errors(2);
-	stacks->a = ft_new_stack();
-	stacks->b = ft_new_stack();
+	stacks->a = ft_init_stack();
+	stacks->b = ft_init_stack();
 	return (stacks);
 }
 
