@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 16:41:14 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 10:59:04 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ t_stack	*ft_new_stack(void)
 		ft_errors(2);
 	new_stack->head = NULL;
 	new_stack->tail = NULL;
+	new_stack->len = 0;
 	return (new_stack);
 }
 
@@ -61,4 +62,5 @@ void	ft_linked_list(int value, t_stacks **stacks)
 		stack->head->prev = new_node;
 		stack->tail = new_node;
 	}
+	stack->len++;
 }

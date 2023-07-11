@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 17:39:48 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 10:56:38 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	print_stack_a(t_stacks *stacks)
 		printf("Stack A is empty.\n");
 		return ;
 	}
-	printf("Stack A:\n");
+	printf("Stack A: %i\n", stacks->a->len);
 	print_stack(stacks->a);
 }
 
@@ -53,7 +53,7 @@ void	print_stack_b(t_stacks *stacks)
 		printf("Stack B is empty.\n");
 		return ;
 	}
-	printf("Stack B:\n");
+	printf("Stack B: %i\n", stacks->b->len);
 	print_stack(stacks->b);
 }
 

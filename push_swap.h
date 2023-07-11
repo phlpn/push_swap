@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/10 17:29:45 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 10:53:14 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 //////  D  E  B  U  G  //////
 
 // Structures
-
 typedef struct s_node
 {
 	int				value;
@@ -33,6 +32,7 @@ typedef struct s_stack
 {
 	struct s_node	*head;
 	struct s_node	*tail;
+	int				len;
 }	t_stack;
 
 typedef struct s_stacks
