@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 12:05:43 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 16:01:24 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@ void	print_stack(t_stack	*stack)
 	current = stack->head;
 	while (1)
 	{
-		printf("%i < %i > %i",
-			current->prev->value, current->value, current->next->value);
+		printf("%i < %i > %i [%i]",
+			current->prev->value, current->value,
+			current->next->value, current->rank);
 		if (current == stack->head && current == stack->tail)
 			printf("\tHEAD & TAIL\n");
 		else if (current == stack->head)

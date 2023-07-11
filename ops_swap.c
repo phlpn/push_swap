@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:59:32 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 15:45:32 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_swap(t_stack *stack)
 	tmp = stack->head->value;
 	stack->head->value = stack->head->next->value;
 	stack->head->next->value = tmp;
+	ft_update_ranks(stack);
 }
 
 void	ft_sa(t_stacks **stacks)
