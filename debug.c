@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 16:01:24 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 16:49:16 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,8 @@ void	print_stack_a(t_stacks *stacks)
 		printf("Stack A is empty.\n");
 		return ;
 	}
-	printf("Stack A: %i\n", stacks->a->len);
+	printf("Stack A | Len: %i | Avg: %i\n",
+		stacks->a->len, ft_average_value(stacks->a));
 	print_stack(stacks->a);
 }
 

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 15:44:07 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 16:29:23 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,11 +59,12 @@ char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 char		**ft_split(char const *s, char c);
 
-// Linked Lists Initialization
+// Linked Lists Utils
 t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_listify(int value, t_stacks **stacks);
 void		ft_update_ranks(t_stack *stack);
+int			ft_average_value(t_stack *stack);
 
 // Swap Ops
 void		ft_swap(t_stack *stack);
