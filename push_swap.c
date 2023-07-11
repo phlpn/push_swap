@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:40:16 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:42:22 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	main(int ac, char **av)
 	stacks = ft_init_stacks();
 	i = -1;
 	while (++i < size)
-		ft_linked_list(stack[i], &stacks);
+		ft_linked_listify(stack[i], &stacks);
 	free(stack);
 	print_stacks(stacks);
 	ft_sa(&stacks), printf("== SA ==\n");

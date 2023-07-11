@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   liststuff.c                                        :+:      :+:    :+:   */
+/*   utils_list.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 10:59:04 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:42:30 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ t_stacks	*ft_init_stacks(void)
 	return (stacks);
 }
 
-void	ft_linked_list(int value, t_stacks **stacks)
+void	ft_linked_listify(int value, t_stacks **stacks)
 {
 	t_node	*new_node;
 	t_stack	*stack;
