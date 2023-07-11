@@ -6,12 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:36:47 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:09:14 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:14:42 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Reverse rotate the stack by one
 void	ft_rrot(t_stack *stack)
 {
 	stack->head = stack->head->prev;

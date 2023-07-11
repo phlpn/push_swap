@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:08:00 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:15:13 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
+// Swap the first two nodes's values of the stack
 void	ft_swap(t_stack *stack)
 {
 	int	tmp;

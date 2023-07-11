@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 11:08:15 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 11:12:53 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Removes the first node of a doubly circular linked list and returns it
+// Removes the first node of a doubly circular linked list and returns its addr.
 t_node	*ft_shift(t_stack *stack)
 {
 	t_node	*push;
