@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 16:42:17 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 17:12:52 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	ft_update_ranks(t_stack *stack)
 	}
 }
 
-int	ft_average_value(t_stack *stack)
+int	ft_30(t_stack *stack)
 {
 	t_node	*current;
 	int		avg;
@@ -103,5 +103,5 @@ int	ft_average_value(t_stack *stack)
 			break ;
 		current = current->next;
 	}
-	return (avg / stack->len);
+	return (avg * (float)0.3);
 }

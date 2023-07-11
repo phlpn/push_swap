@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 16:29:23 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/11 17:13:33 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 
 typedef struct s_node
 {
-	int				value;
 	struct s_node	*prev;
 	struct s_node	*next;
+	int				value;
 	int				rank;
 }	t_node;
 
@@ -32,6 +32,7 @@ typedef struct s_stack
 {
 	struct s_node	*head;
 	struct s_node	*tail;
+	int				avg;
 	int				len;
 }	t_stack;
 
@@ -64,7 +65,7 @@ t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_listify(int value, t_stacks **stacks);
 void		ft_update_ranks(t_stack *stack);
-int			ft_average_value(t_stack *stack);
+int			ft_30(t_stack *stack);
 
 // Swap Ops
 void		ft_swap(t_stack *stack);
