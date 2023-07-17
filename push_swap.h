@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 17:13:33 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/17 15:28:57 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,11 @@ void		ft_rrot(t_stack *stack);
 void		ft_rra(t_stacks **stacks);
 void		ft_rrb(t_stacks **stacks);
 void		ft_rrr(t_stacks **stacks);
+
+// Sorting
+int			ft_checksorted(t_stack *stack);
+int			ft_min(t_stack *stack);
+int			ft_max(t_stack *stack);
 
 // Error Management
 void		ft_errors(int code);
