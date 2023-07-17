@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   sorting.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/17 14:33:17 by alexphil         ###   ########.fr       */
+/*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
+/*   Updated: 2023/07/17 14:54:31 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int ac, char **av)
+void	ft_sort3(t_stacks **stacks)
 {
-	t_stacks	*stacks;
-	int			*stack;
-	int			size;
-	int			i;
+	t_stack	*a;
 
-	if (ac < 2)
-		ft_errors(1);
-	else if (ac == 2)
-		stack = ft_string_to_stack(av[1], &size);
-	else if (ac > 2)
-		stack = ft_args_to_stack(ac, &*av, &size);
-	if (ft_has_doubles(stack, size))
-		ft_errors(1);
-	stacks = ft_init_stacks();
-	i = -1;
-	while (++i < size)
-		ft_linked_listify(stack[i], &stacks);
-	free(stack);
-	// ft_subject_exemple(&stacks);
+	a = (*stacks)->a;
+}
+
+void	ft_sort5(t_stacks **stacks)
+{
+	
 }
