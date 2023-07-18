@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/17 15:39:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 12:20:40 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ int	main(int ac, char **av)
 	while (++i < size)
 		ft_linked_listify(stack[i], &stacks);
 	free(stack);
-	if (ft_checksorted(stacks->a))
-		printf("Shit's sorted dawg.\n");
-	else
-		printf("Shit's NOT sorted dawg.\n");
-	printf("Min: %i\n", ft_min(stacks->a));
-	printf("Max: %i\n", ft_max(stacks->a));
+	if (!ft_checksorted((*stacks).a))
+		ft_sort3(&stacks);
+	print_stack_a(stacks);
 }

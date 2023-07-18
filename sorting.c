@@ -6,19 +6,26 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/17 15:40:02 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 12:31:36 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void	ft_sort3(t_stacks **stacks)
-// {
-// }
-
-// void	ft_sort5(t_stacks **stacks)
-// {
-// }
+void	ft_sort3(t_stacks **stacks)
+{
+	if (ft_min((*stacks)->a) == (*stacks)->a->head->value)
+	{
+		ft_rra(stacks);
+		ft_sa(stacks);
+	}
+	else if (ft_max((*stacks)->a) == (*stacks)->a->head->value)
+	{
+		ft_ra(stacks);
+		if (!ft_checksorted((*stacks)->a))
+			ft_sa(stacks);
+	}
+}
 
 int	ft_checksorted(t_stack *stack)
 {
