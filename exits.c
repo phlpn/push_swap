@@ -6,19 +6,14 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 09:15:35 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/06 16:51:41 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:52:41 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_errors(int code)
+void	ft_exits(char *message)
 {
-	if (code == 0)
-		printf("INPUT: A single element is considered as already sorted.\n");
-	if (code == 1)
-		printf("INPUT: Fucked up input, shit head.\n");
-	if (code == 2)
-		printf("MALLOC: A memory allocation failed.\n");
-	exit(code);
+	printf("%s\n", message);
+	exit(1);
 }
