@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:36:54 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 12:14:01 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:48:42 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,13 @@ int	ft_correct_str_input(char *s)
 
 	i = -1;
 	if (!s[0])
-		ft_errors(1);
+		ft_exits("Empty input.");
 	while (s[++i])
 	{
-		if (!ft_is_digit(s[i]) && s[i] != ' ' && s[i] != '-')
-			ft_errors(1);
-		if (s[i] == '-' && !ft_is_digit(s[i + 1]))
-			ft_errors(1);
-		if (s[i] == '-' && i != 0 && s[i - 1] != ' ')
-			ft_errors(1);
+		if ((!ft_is_digit(s[i]) && s[i] != ' ' && s[i] != '-')
+			|| (s[i] == '-' && !ft_is_digit(s[i + 1]))
+			|| (s[i] == '-' && i != 0 && s[i - 1] != ' '))
+			ft_exits("Incorrect input.");
 	}
 	return (1);
 }
@@ -63,18 +61,18 @@ int	*ft_string_to_stack(char *s, int *size)
 	ft_correct_str_input(s);
 	*size = ft_count_numbers(s);
 	if (*size == 1)
-		ft_errors(0);
+		ft_exits("A single number is considered as already sorted.");
 	tmp = ft_split(s, ' ');
 	if (!tmp)
-		ft_errors(2);
+		ft_exits("Malloc failure in utils_input.c line 67");
 	stack = malloc(*size * sizeof(int));
 	if (!stack)
-		ft_errors(2);
+		ft_exits("Malloc failure in utils_input.c line 70");
 	while (++i < *size)
 		stack[i] = ft_atoi(tmp[i], &overflow);
 	free(tmp);
 	if (overflow)
-		ft_errors(1);
+		ft_exits("You entered a number that is beyond the integer range.");
 	return (stack);
 }
 
@@ -86,18 +84,18 @@ int	*ft_args_to_stack(int ac, char **av, int *size)
 
 	*size = ac - 1;
 	if (*size == 1)
-		ft_errors(0);
+		ft_exits("A single number is considered as already sorted.");
 	i = -1;
 	overflow = 0;
 	stack = malloc(*size * sizeof(int));
 	while (++i < *size)
 	{
 		if (!ft_correct_str_input(av[i + 1]))
-			ft_errors(1);
+			ft_exits("Incorrect input.");
 		stack[i] = ft_atoi(av[i + 1], &overflow);
 	}
 	if (overflow)
-		ft_errors(1);
+		ft_exits("You entered a number that is beyond the integer range.");
 	return (stack);
 }
 

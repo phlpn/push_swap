@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 13:11:29 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:43:15 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef struct s_stacks
 
 // Main
 int			main(int ac, char **av);
+void		ft_sort(t_stacks *stacks, int size);
 
 // Input Utils
 int			ft_correct_str_input(char *s);
@@ -98,8 +99,8 @@ int			ft_checksorted(t_stack *stack);
 int			ft_min(t_stack *stack);
 int			ft_max(t_stack *stack);
 
-// Error Management
-void		ft_errors(int code);
+// Exit Management
+void		ft_exits(char *message);
 
 //////////////////////  D  E  B  U  G  ////////////////////////////
 void		print_stack(t_stack	*stack);
