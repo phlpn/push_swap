@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 12:14:23 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:11:29 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdlib.h>
 # include <limits.h>
+# include <unistd.h>
 
 //////  D  E  B  U  G  //////
 # include <stdio.h> 
@@ -92,7 +93,7 @@ void		ft_rrb(t_stacks **stacks);
 void		ft_rrr(t_stacks **stacks);
 
 // Sorting
-void		ft_sort3(t_stacks **stack);
+void		ft_sort3(t_stacks **stacks);
 int			ft_checksorted(t_stack *stack);
 int			ft_min(t_stack *stack);
 int			ft_max(t_stack *stack);

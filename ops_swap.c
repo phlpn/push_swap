@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 15:45:32 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:13:16 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ void	ft_swap(t_stack *stack)
 void	ft_sa(t_stacks **stacks)
 {
 	ft_swap((*stacks)->a);
-	printf("== SA ==\n");
+	write(1, "sa\n", 3);
 }
 
 void	ft_sb(t_stacks **stacks)
 {
 	ft_swap((*stacks)->b);
-	printf("== SB ==\n");
+	write(1, "sb\n", 3);
 }
 
 void	ft_ss(t_stacks **stacks)
 {
 	ft_sa(stacks);
 	ft_sb(stacks);
-	printf("== SS ==\n");
+	write(1, "ss\n", 3);
 }

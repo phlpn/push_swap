@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 12:31:36 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 13:09:29 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,13 @@ void	ft_sort3(t_stacks **stacks)
 	{
 		ft_ra(stacks);
 		if (!ft_checksorted((*stacks)->a))
+			ft_sa(stacks);
+	}
+	else
+	{
+		if (ft_max((*stacks)->a) == (*stacks)->a->head->next->value)
+			ft_rra(stacks);
+		else
 			ft_sa(stacks);
 	}
 }
