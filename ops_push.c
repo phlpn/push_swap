@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 16:04:35 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/18 10:28:10 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ t_node	*ft_shift(t_stack *stack)
 	return (push);
 }
 
-// Adds a new node to the beginning of a doubly circular linked list
+// Adds a given new node to the beginning of a doubly circular linked list
 void	ft_unshift(t_node *push, t_stack *stack)
 {
 	if (stack->head)
