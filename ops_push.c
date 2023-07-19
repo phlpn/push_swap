@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 13:12:38 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 11:17:20 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ t_node	*ft_shift(t_stack *stack)
 		stack->head = NULL;
 		stack->tail = NULL;
 	}
-	ft_update_ranks(stack);
 	stack->len--;
 	return (push);
 }
@@ -52,7 +51,6 @@ void	ft_unshift(t_node *push, t_stack *stack)
 		push->prev = push;
 		push->next = push;
 	}
-	ft_update_ranks(stack);
 	stack->len++;
 }
 

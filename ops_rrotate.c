@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:36:47 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 13:14:35 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 11:17:34 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_rrot(t_stack *stack)
 {
 	stack->head = stack->head->prev;
 	stack->tail = stack->tail->prev;
-	ft_update_ranks(stack);
 }
 
 void	ft_rra(t_stacks **stacks)

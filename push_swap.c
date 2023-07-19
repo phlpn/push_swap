@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 14:19:30 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 11:45:09 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_sort(t_stacks *stacks, int size)
 {
 	if (size <= 3)
 		ft_sort3(&stacks);
-	else
-		
 }
 
 int	main(int ac, char **av)
@@ -40,8 +38,10 @@ int	main(int ac, char **av)
 	while (++i < size)
 		ft_linked_listify(stack[i], &stacks);
 	free(stack);
-	if (!ft_checksorted(stacks->a))
-		ft_sort(stacks, size);
-	else
-		ft_exits("Stack is already sorted.");
+	// if (!ft_checksorted(stacks->a))
+	// 	ft_sort(stacks, size);
+	// else
+	// 	ft_exits("Stack is already sorted.");
+	ft_rank(stacks->a);
+	print_stack_a(stacks);
 }
