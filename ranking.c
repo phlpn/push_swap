@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:56:34 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/19 14:50:46 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:56:28 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_rank(t_stack *stack)
 	i = -1;
 	lowest = NULL;
 	prv_lowest = INT_MIN;
-	while (++i <= stack->len)
+	while (++i < stack->len)
 	{
 		current = stack->head;
 		cur_lowest = INT_MAX;
@@ -37,7 +37,7 @@ void	ft_rank(t_stack *stack)
 		{
 			if (lowest == NULL
 				|| current->value > prv_lowest && current->value < cur_lowest)
-				ft_rank_utils(&lowest, &current, &cur_lowest);
+				ft_rank_helper(&lowest, &current, &cur_lowest);
 			if (current == stack->tail)
 				break ;
 			current = current->next;

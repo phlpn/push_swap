@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   DEBUG.c                                            :+:      :+:    :+:   */
+/*   debug.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/11 17:20:15 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:53:51 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	print_stack_a(t_stacks *stacks)
 	}
 	printf("Stack A\n");
 	print_stack(stacks->a);
-	printf("Len: %i | 30%%: %i\n", stacks->a->len, ft_30(stacks->a));
+	printf("Len: %i\n", stacks->a->len);
 }
 
 void	print_stack_b(t_stacks *stacks)
@@ -57,7 +57,7 @@ void	print_stack_b(t_stacks *stacks)
 	}
 	printf("Stack B\n");
 	print_stack(stacks->b);
-	printf("Len: %i | 30%%: %i\n", stacks->b->len, ft_30(stacks->b));
+	printf("Len: %i\n", stacks->b->len);
 }
 
 void	print_stacks(t_stacks *stacks)

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/19 12:56:02 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 14:53:12 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,25 +63,4 @@ void	ft_linked_listify(int value, t_stacks **stacks)
 		stack->tail = new_node;
 	}
 	stack->len++;
-}
-
-int	ft_30(t_stack *stack)
-{
-	t_node	*current;
-	int		avg;
-
-	if (!stack->head)
-		return (0);
-	avg = stack->head->value;
-	if (stack->head == stack->tail)
-		return (avg);
-	current = stack->head->next;
-	while (1)
-	{
-		avg += current->value;
-		if (current == stack->tail)
-			break ;
-		current = current->next;
-	}
-	return (avg * (float)0.3);
 }
