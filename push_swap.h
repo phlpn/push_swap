@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/19 15:03:29 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/19 15:10:29 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,12 +104,12 @@ int			ft_max(t_stack *stack);
 // Exit Management
 void		ft_exits(char *message);
 
-//////////////////////  D  E  B  U  G  ////////////////////////////
+//////////////////////  D  E  B  U  G  //////////////////////
 void		print_stack(t_stack	*stack);
 void		print_stack_a(t_stacks *stacks);
 void		print_stack_b(t_stacks *stacks);
 void		print_stacks(t_stacks *stacks);
 void		ft_subject_exemple(t_stacks **stacks);
-//////////////////////  D  E  B  U  G  ////////////////////////////
+//////////////////////  D  E  B  U  G  //////////////////////
 
 #endif
