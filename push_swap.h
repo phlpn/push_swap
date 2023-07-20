@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 15:42:39 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:02:12 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,7 +100,7 @@ void		ft_rrb(t_stacks **stacks, int print);
 void		ft_rrr(t_stacks **stacks, int print);
 
 // Sorting
-void		ft_sort3(t_stack **stack);
+void		ft_sort3(t_stacks **stacks);
 int			ft_checksorted(t_stack *stack);
 
 // Exit Management

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 15:37:28 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:59:17 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ void	ft_linked_listify(int value, t_stack **stack)
 		(*stack)->head->prev = new_node;
 		(*stack)->tail = new_node;
 	}
-	stack->len++;
+	(*stack)->len++;
 }
 
 int	ft_min(t_stack *stack)

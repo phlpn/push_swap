@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 15:48:27 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:02:29 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_sort(t_stacks *stacks, int size)
 {
 	ft_rank(stacks->a);
 	if (size <= 3)
-		ft_sort3(&stacks->a);
+		ft_sort3(&stacks);
 }
 
 int	main(int ac, char **av)

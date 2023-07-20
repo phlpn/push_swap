@@ -6,40 +6,40 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 15:46:47 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:02:46 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort3(t_stack **stack)
+void	ft_sort3(t_stacks **stacks)
 {
-	if ((*stack)->len == 2)
-		ft_ra(&stack, 1);
-	else if (ft_min((*stack)) == (*stack)->head->value)
+	if ((*stacks)->a->len == 2)
+		ft_ra(stacks, 1);
+	else if (ft_min((*stacks)->a) == (*stacks)->a->head->value)
 	{
-		ft_rra(stack, 1);
-		ft_sa(stack, 1);
+		ft_rra(stacks, 1);
+		ft_sa(stacks, 1);
 	}
-	else if (ft_max(stack) == (*stack)->head->value)
+	else if (ft_max((*stacks)->a) == (*stacks)->a->head->value)
 	{
-		ft_ra(stack, 1);
-		if (!ft_checksorted(stack))
-			ft_sa(stack, 1);
+		ft_ra(stacks, 1);
+		if (!ft_checksorted((*stacks)->a))
+			ft_sa(stacks, 1);
 	}
 	else
 	{
-		if (ft_max(stack) == (*stack)->head->next->value)
-			ft_rra(stack, 1);
+		if (ft_max((*stacks)->a) == (*stacks)->a->head->next->value)
+			ft_rra(stacks, 1);
 		else
-			ft_sa(stack, 1);
+			ft_sa(stacks, 1);
 	}
 }
 
-void	ft_sort3_top(t_stack **stack)
-{
-	
-}
+// void	ft_sort3_top(t_stack **stack)
+// {
+
+// }
 
 // void	ft_sort5
 
