@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 09:15:35 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:20:23 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 14:35:00 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 void	ft_exits(char *message)
 {
 	write(1, message, ft_strlen(message));
+	write(1, "\n", 1);
 	exit(1);
 }

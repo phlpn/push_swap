@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:50:33 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 14:06:18 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	print_stack(t_stack	*stack)
+void	ft_print_stack(t_stack	*stack)
 {
 	t_node	*current;
 
@@ -36,7 +36,7 @@ void	print_stack(t_stack	*stack)
 	}
 }
 
-void	print_stack_a(t_stacks *stacks)
+void	ft_print_stack_a(t_stacks *stacks)
 {
 	if (!stacks->a->head)
 	{
@@ -44,11 +44,11 @@ void	print_stack_a(t_stacks *stacks)
 		return ;
 	}
 	printf("Stack A\n");
-	print_stack(stacks->a);
+	ft_print_stack(stacks->a);
 	printf("Len: %i\n", stacks->a->len);
 }
 
-void	print_stack_b(t_stacks *stacks)
+void	ft_print_stack_b(t_stacks *stacks)
 {
 	if (!stacks->b->head)
 	{
@@ -56,38 +56,38 @@ void	print_stack_b(t_stacks *stacks)
 		return ;
 	}
 	printf("Stack B\n");
-	print_stack(stacks->b);
+	ft_print_stack(stacks->b);
 	printf("Len: %i\n", stacks->b->len);
 }
 
-void	print_stacks(t_stacks *stacks)
+void	ft_print_stacks(t_stacks *stacks)
 {
-	print_stack_a(stacks);
-	print_stack_b(stacks);
+	ft_print_stack_a(stacks);
+	ft_print_stack_b(stacks);
 }
 
 // To use with "2 1 3 6 5 8"
 void	ft_subject_exemple(t_stacks **stacks)
 {
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_sa(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_pb(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_pb(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_pb(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_rr(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_rrr(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_sa(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_pa(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_pa(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 	ft_pa(stacks, 1);
-	print_stacks(*stacks);
+	ft_print_stacks(*stacks);
 }

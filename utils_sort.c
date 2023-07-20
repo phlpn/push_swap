@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:40:01 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 14:17:04 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,10 @@ void	ft_sort3(t_stacks **stacks)
 	}
 }
 
+// ft_sort5
+
+// ft_sort_top3
+
 int	ft_checksorted(t_stack *stack)
 {
 	t_node	*current;
@@ -48,40 +52,4 @@ int	ft_checksorted(t_stack *stack)
 		current = current->next;
 	}
 	return (1);
-}
-
-int	ft_min(t_stack *stack)
-{
-	t_node	*current;
-	int		min;
-
-	current = (*stack).head->next;
-	min = (*stack).head->value;
-	while (1)
-	{
-		if (current->value < min)
-			min = current->value;
-		if (current == stack->tail)
-			break ;
-		current = current->next;
-	}
-	return (min);
-}
-
-int	ft_max(t_stack *stack)
-{
-	t_node	*current;
-	int		max;
-
-	current = stack->head->next;
-	max = stack->head->value;
-	while (1)
-	{
-		if (current->value > max)
-			max = current->value;
-		if (current == stack->tail)
-			break ;
-		current = current->next;
-	}
-	return (max);
 }

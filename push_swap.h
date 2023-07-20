@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:52:04 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 14:06:34 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ char		**ft_split(char const *s, char c);
 t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_listify(int value, t_stacks **stacks);
+int			ft_min(t_stack *stack);
+int			ft_max(t_stack *stack);
 
 // Ranking
 void		ft_rank(t_stack *stack);
@@ -99,17 +101,15 @@ void		ft_rrr(t_stacks **stacks, int print);
 // Sorting
 void		ft_sort3(t_stacks **stacks);
 int			ft_checksorted(t_stack *stack);
-int			ft_min(t_stack *stack);
-int			ft_max(t_stack *stack);
 
 // Exit Management
 void		ft_exits(char *message);
 
 //////////////////////  D  E  B  U  G  //////////////////////
-void		print_stack(t_stack	*stack);
-void		print_stack_a(t_stacks *stacks);
-void		print_stack_b(t_stacks *stacks);
-void		print_stacks(t_stacks *stacks);
+void		ft_print_stack(t_stack	*stack);
+void		ft_print_stack_a(t_stacks *stacks);
+void		ft_print_stack_b(t_stacks *stacks);
+void		ft_print_stacks(t_stacks *stacks);
 void		ft_subject_exemple(t_stacks **stacks);
 //////////////////////  D  E  B  U  G  //////////////////////
 
