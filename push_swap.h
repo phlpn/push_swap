@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 14:06:34 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:42:39 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,8 +65,9 @@ char		**ft_split(char const *s, char c);
 // Linked Lists Utils
 t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
-void		ft_linked_listify(int value, t_stacks **stacks);
+void		ft_linked_listify(int value, t_stack **stack);
 int			ft_min(t_stack *stack);
+int			ft_min_size(t_stack *stack, int size);
 int			ft_max(t_stack *stack);
 
 // Ranking
@@ -99,7 +100,7 @@ void		ft_rrb(t_stacks **stacks, int print);
 void		ft_rrr(t_stacks **stacks, int print);
 
 // Sorting
-void		ft_sort3(t_stacks **stacks);
+void		ft_sort3(t_stack **stack);
 int			ft_checksorted(t_stack *stack);
 
 // Exit Management

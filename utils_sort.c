@@ -6,37 +6,42 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 14:17:04 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 15:46:47 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_sort3(t_stacks **stacks)
+void	ft_sort3(t_stack **stack)
 {
-	if (ft_min((*stacks)->a) == (*stacks)->a->head->value)
+	if ((*stack)->len == 2)
+		ft_ra(&stack, 1);
+	else if (ft_min((*stack)) == (*stack)->head->value)
 	{
-		ft_rra(stacks, 1);
-		ft_sa(stacks, 1);
+		ft_rra(stack, 1);
+		ft_sa(stack, 1);
 	}
-	else if (ft_max((*stacks)->a) == (*stacks)->a->head->value)
+	else if (ft_max(stack) == (*stack)->head->value)
 	{
-		ft_ra(stacks, 1);
-		if (!ft_checksorted((*stacks)->a))
-			ft_sa(stacks, 1);
+		ft_ra(stack, 1);
+		if (!ft_checksorted(stack))
+			ft_sa(stack, 1);
 	}
 	else
 	{
-		if (ft_max((*stacks)->a) == (*stacks)->a->head->next->value)
-			ft_rra(stacks, 1);
+		if (ft_max(stack) == (*stack)->head->next->value)
+			ft_rra(stack, 1);
 		else
-			ft_sa(stacks, 1);
+			ft_sa(stack, 1);
 	}
 }
 
-// ft_sort5
+void	ft_sort3_top(t_stack **stack)
+{
+	
+}
 
-// ft_sort_top3
+// void	ft_sort5
 
 int	ft_checksorted(t_stack *stack)
 {
