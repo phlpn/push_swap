@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorting.c                                          :+:      :+:    :+:   */
+/*   utils_sort.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 13:09:29 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:40:01 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,21 @@ void	ft_sort3(t_stacks **stacks)
 {
 	if (ft_min((*stacks)->a) == (*stacks)->a->head->value)
 	{
-		ft_rra(stacks);
-		ft_sa(stacks);
+		ft_rra(stacks, 1);
+		ft_sa(stacks, 1);
 	}
 	else if (ft_max((*stacks)->a) == (*stacks)->a->head->value)
 	{
-		ft_ra(stacks);
+		ft_ra(stacks, 1);
 		if (!ft_checksorted((*stacks)->a))
-			ft_sa(stacks);
+			ft_sa(stacks, 1);
 	}
 	else
 	{
 		if (ft_max((*stacks)->a) == (*stacks)->a->head->next->value)
-			ft_rra(stacks);
+			ft_rra(stacks, 1);
 		else
-			ft_sa(stacks);
+			ft_sa(stacks, 1);
 	}
 }
 

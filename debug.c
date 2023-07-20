@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/19 14:53:51 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:50:33 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,24 +70,24 @@ void	print_stacks(t_stacks *stacks)
 void	ft_subject_exemple(t_stacks **stacks)
 {
 	print_stacks(*stacks);
-	ft_sa(stacks);
+	ft_sa(stacks, 1);
 	print_stacks(*stacks);
-	ft_pb(stacks);
+	ft_pb(stacks, 1);
 	print_stacks(*stacks);
-	ft_pb(stacks);
+	ft_pb(stacks, 1);
 	print_stacks(*stacks);
-	ft_pb(stacks);
+	ft_pb(stacks, 1);
 	print_stacks(*stacks);
-	ft_rr(stacks);
+	ft_rr(stacks, 1);
 	print_stacks(*stacks);
-	ft_rrr(stacks);
+	ft_rrr(stacks, 1);
 	print_stacks(*stacks);
-	ft_sa(stacks);
+	ft_sa(stacks, 1);
 	print_stacks(*stacks);
-	ft_pa(stacks);
+	ft_pa(stacks, 1);
 	print_stacks(*stacks);
-	ft_pa(stacks);
+	ft_pa(stacks, 1);
 	print_stacks(*stacks);
-	ft_pa(stacks);
+	ft_pa(stacks, 1);
 	print_stacks(*stacks);
 }

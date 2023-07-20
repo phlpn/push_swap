@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/19 11:17:20 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:49:30 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,14 +54,16 @@ void	ft_unshift(t_node *push, t_stack *stack)
 	stack->len++;
 }
 
-void	ft_pa(t_stacks **stacks)
+void	ft_pa(t_stacks **stacks, int print)
 {
 	ft_unshift(ft_shift((*stacks)->b), (*stacks)->a);
-	write(1, "pa\n", 3);
+	if (print)
+		write(1, "pa\n", 3);
 }
 
-void	ft_pb(t_stacks **stacks)
+void	ft_pb(t_stacks **stacks, int print)
 {
 	ft_unshift(ft_shift((*stacks)->a), (*stacks)->b);
-	write(1, "pb\n", 3);
+	if (print)
+		write(1, "pb\n", 3);
 }

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:36:54 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/18 13:48:42 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 11:22:04 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,10 @@ int	*ft_string_to_stack(char *s, int *size)
 		ft_exits("A single number is considered as already sorted.");
 	tmp = ft_split(s, ' ');
 	if (!tmp)
-		ft_exits("Malloc failure in utils_input.c line 67");
+		ft_exits("Malloc failure in utils_input.c line 67.");
 	stack = malloc(*size * sizeof(int));
 	if (!stack)
-		ft_exits("Malloc failure in utils_input.c line 70");
+		ft_exits("Malloc failure in utils_input.c line 70.");
 	while (++i < *size)
 		stack[i] = ft_atoi(tmp[i], &overflow);
 	free(tmp);
