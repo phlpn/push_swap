@@ -6,8 +6,12 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/20 15:08:37 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 15:48:56 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:07:17 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+// ft_sort_rev3
+
+// ft_sort_rev5

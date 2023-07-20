@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 16:02:46 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/20 16:05:53 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,7 @@ void	ft_sort3(t_stacks **stacks)
 	}
 }
 
-// void	ft_sort3_top(t_stack **stack)
-// {
-
-// }
+// void	ft_sort3_top
 
 // void	ft_sort5
 
