@@ -6,18 +6,11 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 16:02:29 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:58:43 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	ft_sort(t_stacks *stacks, int size)
-{
-	ft_rank(stacks->a);
-	if (size <= 3)
-		ft_sort3(&stacks);
-}
 
 int	main(int ac, char **av)
 {
@@ -39,9 +32,7 @@ int	main(int ac, char **av)
 	while (++i < size)
 		ft_linked_listify(stack[i], &stacks->a);
 	free(stack);
-	// if (!ft_checksorted(stacks->a))
-	// 	ft_sort(stacks, size);
-	// else
-	// 	ft_exits("Stack is already sorted.");
-	printf("%i\n", ft_min_size(stacks->a, 3));
+	ft_rank((*stacks).a);
+	ft_sorting(&stacks);
+	ft_print_stack_a(stacks);
 }

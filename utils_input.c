@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:36:54 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:22:04 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/25 15:43:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_has_doubles(int *stack, int size)
 		while (++j < size)
 		{
 			if (j == i)
-				j++;
+				continue ;
 			if (stack[i] == stack[j])
 				return (1);
 		}

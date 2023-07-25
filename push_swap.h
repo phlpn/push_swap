@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 16:02:12 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/25 14:56:41 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ typedef struct s_stacks
 
 // Main
 int			main(int ac, char **av);
-void		ft_sort(t_stacks *stacks, int size);
 
 // Input Utils
 int			ft_correct_str_input(char *s);
@@ -69,6 +68,7 @@ void		ft_linked_listify(int value, t_stack **stack);
 int			ft_min(t_stack *stack);
 int			ft_min_size(t_stack *stack, int size);
 int			ft_max(t_stack *stack);
+int			ft_max_size(t_stack *stack, int size);
 
 // Ranking
 void		ft_rank(t_stack *stack);
@@ -101,7 +101,18 @@ void		ft_rrr(t_stacks **stacks, int print);
 
 // Sorting
 void		ft_sort3(t_stacks **stacks);
+void		ft_sort3_top(t_stacks **stacks);
+void		ft_sort3_rev(t_stacks **stacks);
+void		ft_sort5(t_stacks **stacks);
 int			ft_checksorted(t_stack *stack);
+int			ft_checksorted_rev(t_stack *stack);
+int			ft_checksorted_size(t_stack *stack, int len);
+int			ft_get_min_idx(t_stacks **stacks);
+
+// Quick Sorting
+void		ft_sorting(t_stacks **stacks);
+void		ft_sort_stack_a(t_stacks **stacks, int size);
+void		ft_sort_stack_b(t_stacks **stacks, int size);
 
 // Exit Management
 void		ft_exits(char *message);
