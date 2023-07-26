@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:56:34 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:12:01 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/26 15:54:10 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,4 +45,20 @@ void	ft_rank(t_stack *stack)
 		prv_lowest = cur_lowest;
 		lowest->rank = i;
 	}
+}
+
+int	ft_get_min_rank_within(t_stack **stack, int size)
+{
+	t_node	*current;
+	int		min;
+
+	current = (*stack)->head->next;
+	min = (*stack)->head->rank;
+	while (--size)
+	{
+		if (current->rank < min)
+			min = current->rank;
+		current = current->next;
+	}
+	return (min);
 }
