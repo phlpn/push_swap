@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/26 16:42:22 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/27 18:27:54 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,13 @@ int	main(int ac, char **av)
 	int			i;
 
 	if (ac < 2)
+	{
 		ft_exits("Incorrect input.");
+		return (0);
+	}
 	else if (ac == 2)
 		stack = ft_string_to_stack(av[1], &size);
-	else if (ac > 2)
+	else 
 		stack = ft_args_to_stack(ac, &*av, &size);
 	if (ft_has_doubles(stack, size))
 		ft_exits("Input has doubles.");
@@ -33,7 +36,7 @@ int	main(int ac, char **av)
 		ft_linked_listify(stack[i], &stacks->a);
 	free(stack);
 	ft_rank((*stacks).a);
-	// ft_sorting(&stacks);
-	ft_print_stack_a(stacks);
-	printf("Min rank: %i\n", ft_get_min_rank_within(&stacks->a, 3));
+	ft_sorting(&stacks);
+	//ft_subject_exemple(&stacks);
+	// ft_print_stacks(stacks);
 }

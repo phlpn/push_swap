@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 14:06:18 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/27 16:38:08 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ void	ft_print_stack(t_stack	*stack)
 			printf("\n");
 		if (current == stack->tail)
 			break ;
+		//printf("C'EST DE LA MERDE\n");
+		//printf("C'EST DE LA MERDE x2 %i\n", stack->tail->value);
 		current = current->next;
 	}
 }

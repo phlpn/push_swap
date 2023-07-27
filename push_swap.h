@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/26 15:55:35 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/27 17:24:20 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,7 @@ void		ft_sort5(t_stacks **stacks);
 int			ft_checksorted(t_stack *stack);
 int			ft_checksorted_rev(t_stack *stack);
 int			ft_checksorted_size(t_stack *stack, int len);
+int			ft_checksorted_size_rev(t_stack *stack, int len);
 int			ft_get_min_idx(t_stacks **stacks);
 
 // Quick Sorting

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/26 15:53:44 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/27 12:30:23 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,7 @@ int	ft_max(t_stack *stack)
 	t_node	*current;
 	int		max;
 
+	// printf("%i\n", stack->head->next->value);
 	current = stack->head->next;
 	max = stack->head->value;
 	while (1)
