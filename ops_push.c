@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 11:49:30 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/31 12:20:30 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,8 @@ void	ft_unshift(t_node *push, t_stack *stack)
 
 void	ft_pa(t_stacks **stacks, int print)
 {
+	if (!(*stacks)->b->len)
+		return ;
 	ft_unshift(ft_shift((*stacks)->b), (*stacks)->a);
 	if (print)
 		write(1, "pa\n", 3);
@@ -63,6 +65,8 @@ void	ft_pa(t_stacks **stacks, int print)
 
 void	ft_pb(t_stacks **stacks, int print)
 {
+	if (!(*stacks)->a->len)
+		return ;
 	ft_unshift(ft_shift((*stacks)->a), (*stacks)->b);
 	if (print)
 		write(1, "pb\n", 3);

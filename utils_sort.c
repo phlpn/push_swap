@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/27 17:23:48 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/07/31 17:54:24 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_sort3(t_stacks **stacks)
 
 	a = (*stacks)->a;
 	max = ft_max(a);
-	if (a->len == 2)
+	if (a->len == 2 && !ft_checksorted((*stacks)->a))
 		ft_ra(stacks, 1);
 	else if (a->head->value == max)
 		ft_ra(stacks, 1);
@@ -59,9 +59,9 @@ void	ft_sort5(t_stacks **stacks)
 		while (ft_min((*stacks)->a) != (*stacks)->a->head->value)
 		{
 			if (ft_min((*stacks)->a) <= 2)
-				ft_rra(stacks, 1);
-			if (ft_min((*stacks)->a) > 2)
 				ft_ra(stacks, 1);
+			if (ft_min((*stacks)->a) > 2)
+				ft_rra(stacks, 1);
 		}
 		ft_pb(stacks, 1);
 	}
