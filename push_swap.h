@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/01 14:43:46 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:02:27 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_listify(int value, t_stack **stack);
 void		ft_link_output(char *value, t_print *stack);
+int			ft_op_timize(t_print *stack, char **prev, char *new);
 int			ft_min(t_stack *stack);
 int			ft_min_size(t_stack *stack, int size);
 int			ft_max(t_stack *stack);

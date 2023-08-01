@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/01 14:44:16 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 17:02:51 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,11 +75,63 @@ void	ft_linked_listify(int value, t_stack **stack)
 	(*stack)->len++;
 }
 
+int	ft_strcmp(char *str1, char *str2)
+{
+	while (*str1 && *str2)
+	{
+		if (*str1 != *str2)
+			return (0);
+		str1++;
+		str2++;
+	}
+	return (*str1 == '\0' && *str2 == '\0');
+}
+
+void	ft_removelast(t_print *stack)
+{
+	t_op	*current;
+
+	current = stack->head;
+	while (current->next->next)
+		current = current->next;
+	free(current->next);
+	current->next = NULL;
+}
+
+int	ft_op_timize(t_print *stack, char **prev, char *new)
+{
+	if ((ft_strcmp(*prev, "sa\n") && ft_strcmp(new, "sb\n"))
+		|| (ft_strcmp(*prev, "sb\n") && ft_strcmp(new, "sa\n")))
+		return (*prev = "ss\n", 1);
+	else if ((ft_strcmp(*prev, "ra\n") && ft_strcmp(new, "rb\n"))
+		|| (ft_strcmp(*prev, "rb\n") && ft_strcmp(new, "ra\n")))
+		return (*prev = "rr\n", 1);
+	else if ((ft_strcmp(*prev, "rra\n") && ft_strcmp(new, "rrb\n"))
+		|| (ft_strcmp(*prev, "rrb\n") && ft_strcmp(new, "rra\n")))
+		return (*prev = "rrr\n", 1);
+	else if ((ft_strcmp(*prev, "ra\n") && ft_strcmp(new, "rra\n"))
+		|| (ft_strcmp(*prev, "rra\n") && ft_strcmp(new, "ra\n"))
+		|| (ft_strcmp(*prev, "rb\n") && ft_strcmp(new, "rrb\n"))
+		|| (ft_strcmp(*prev, "rrb\n") && ft_strcmp(new, "rb\n"))
+		|| (ft_strcmp(*prev, "pa\n") && ft_strcmp(new, "pb\n"))
+		|| (ft_strcmp(*prev, "pb\n") && ft_strcmp(new, "pa\n")))
+		return (ft_removelast(&(*stack)), 1);
+	return (0);
+}
+
 void	ft_link_output(char *value, t_print *stack)
 {
 	t_op	*new_op;
 	t_op	*current;
 
+	if (stack->head)
+	{
+		current = stack->head;
+		while (current->next)
+			current = current->next;
+		if (ft_op_timize(stack, &current->value, value))
+			return ;
+	}
 	new_op = malloc(sizeof(t_node));
 	if (!new_op)
 		ft_exits("Malloc failure in ft_link_output.");
