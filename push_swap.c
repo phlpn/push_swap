@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/31 16:58:41 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:32:00 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,15 @@ int	main(int ac, char **av)
 	free(stack);
 	ft_rank((*stacks).a);
 	ft_sorting(&stacks);
+	// printf("%i\n", ft_checksorted_size(stacks->a, 1));
 	//ft_subject_exemple(&stacks);
 	// ft_print_stacks(stacks);
+	// printf("%p\n", stacks->print->head);
+	t_op	*current = stacks->print->head;
+	while (current)
+	{
+
+		write(1, current->value, ft_strlen(current->value));
+		current = current->next;
+	}
 }

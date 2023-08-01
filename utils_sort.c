@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/31 17:54:24 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 12:42:25 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,8 +134,10 @@ int	ft_checksorted_size(t_stack *stack, int len)
 {
 	t_node	*current;
 
+	if (len == 1 || stack->len == 1)
+		return (1);
 	current = stack->head->next;
-	while (len--)
+	while (--len)
 	{
 		if (current->value < current->prev->value)
 			return (0);
@@ -149,7 +151,7 @@ int	ft_checksorted_size_rev(t_stack *stack, int len)
 	t_node	*current;
 
 	current = stack->head->next;
-	while (len--)
+	while (--len)
 	{
 		if (current->value > current->prev->value)
 			return (0);

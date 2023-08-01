@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/27 17:24:20 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:43:46 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,12 @@ typedef struct s_node
 	int				rank;
 }	t_node;
 
+typedef struct s_op
+{
+	struct s_op		*next;
+	char			*value;
+}	t_op;
+
 typedef struct s_stack
 {
 	struct s_node	*head;
@@ -37,10 +43,16 @@ typedef struct s_stack
 	int				len;
 }	t_stack;
 
+typedef struct s_print
+{
+	struct s_op		*head;
+}	t_print;
+
 typedef struct s_stacks
 {
 	struct s_stack	*a;
 	struct s_stack	*b;
+	struct s_print	*print;
 }	t_stacks;
 
 // Main
@@ -65,6 +77,7 @@ char		**ft_split(char const *s, char c);
 t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_listify(int value, t_stack **stack);
+void		ft_link_output(char *value, t_print *stack);
 int			ft_min(t_stack *stack);
 int			ft_min_size(t_stack *stack, int size);
 int			ft_max(t_stack *stack);

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 14:20:42 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/31 17:55:07 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:39:13 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ void	ft_sorting(t_stacks **stacks)
 	if (ft_checksorted((*stacks)->a))
 		exit(1);
 	ft_sort_stack_a(stacks, (*stacks)->a->len);
-	// ft_print_stack_a((*stacks));
 }
 
 void	ft_sort_stack_a(t_stacks **stacks, int size)
@@ -30,7 +29,7 @@ void	ft_sort_stack_a(t_stacks **stacks, int size)
 	if ((*stacks)->a->len < 1 || !size)
 		return ;
 	// fprintf(stderr, "HELLO FROM STACK A %d\n", size);
-	if (ft_checksorted_size((*stacks)->a, size))
+	else if (ft_checksorted_size((*stacks)->a, size))
 	{
 		// fprintf(stderr, "SORTED! %d\n", size);
 		// ft_print_stack_a((*stacks));
@@ -40,9 +39,9 @@ void	ft_sort_stack_a(t_stacks **stacks, int size)
 		// printf("HELLO FROM 3\n");
 		ft_sort3(stacks);
 		return ;}
-	// else if ((*stacks)->a->len == 5){
-	// 	ft_sort5(stacks);
-	// 	return ;}
+	else if ((*stacks)->a->len == 5){
+		ft_sort5(stacks);
+		return ;}
 	else if (size == 3){
 		// printf("TOP 3\n");
 		ft_sort3_top(stacks);
@@ -126,16 +125,14 @@ void	ft_sort_stack_b(t_stacks **stacks, int size)
 		ft_pa(stacks, 1);
 		return ;
 	}
-	else if (size == 2 || (*stacks)->b->len == 2)
-	{
-		if ((*stacks)->b->head->value < (*stacks)->b->head->next->value)
-		{
-			ft_sb(stacks, 1);
-			ft_pa(stacks, 1);
-			ft_pa(stacks, 1);
-		}
-		return ;
-	}
+	// else if (size == 2 || (*stacks)->b->len == 2)
+	// {
+	// 	if ((*stacks)->b->head->value < (*stacks)->b->head->next->value)
+	// 		ft_sb(stacks, 1);
+	// 	ft_pa(stacks, 1);
+	// 	ft_pa(stacks, 1);
+	// 	return ;
+	// }
 	rev = 0;
 	mid = size / 2;
 	piv = ft_get_min_rank_within(&(*stacks)->b, size) + mid;
@@ -164,7 +161,7 @@ void	ft_sort_stack_b(t_stacks **stacks, int size)
 		}
 		// printf("PUSHING A limit: %d mid: %d size: %d pivot: %d rank: %d push: %d\n", mid + size % 2, size / 2, size, piv, (*stacks)->b->head->rank, push);
 	}
-	if ((*stacks)->a->len > mid)
+	if ((*stacks)->b->len > mid)
 	{	while (rev > 0)
 		{
 			ft_rrb(stacks, 1);

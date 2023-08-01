@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/27 12:30:23 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/01 14:44:16 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ t_stack	*ft_init_stack(void)
 	return (new_stack);
 }
 
+t_print	*ft_init_print(void)
+{
+	t_print	*print;
+
+	print = malloc(sizeof(t_print));
+	if (!print)
+		ft_exits("Malloc failure in ft_init_print.");
+	print->head = NULL;
+	return (print);
+}
+
 t_stacks	*ft_init_stacks(void)
 {
 	t_stacks	*stacks;
@@ -34,6 +45,7 @@ t_stacks	*ft_init_stacks(void)
 		ft_exits("Malloc failure in utils_list line 32.");
 	stacks->a = ft_init_stack();
 	stacks->b = ft_init_stack();
+	stacks->print = ft_init_print();
 	return (stacks);
 }
 
@@ -61,6 +73,27 @@ void	ft_linked_listify(int value, t_stack **stack)
 		(*stack)->tail = new_node;
 	}
 	(*stack)->len++;
+}
+
+void	ft_link_output(char *value, t_print *stack)
+{
+	t_op	*new_op;
+	t_op	*current;
+
+	new_op = malloc(sizeof(t_node));
+	if (!new_op)
+		ft_exits("Malloc failure in ft_link_output.");
+	new_op->value = value;
+	if (!stack->head)
+		stack->head = new_op;
+	else
+	{
+		current = stack->head;
+		while (current->next)
+			current = current->next;
+		current->next = new_op;
+	}
+	new_op->next = NULL;
 }
 
 int	ft_min(t_stack *stack)
