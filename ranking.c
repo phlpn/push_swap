@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:56:34 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/31 14:40:01 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 15:01:07 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_rank_helper(t_node **lowest, t_node **current, int *cur_lowest)
+static void	ft_rank_helper(t_node **lowest, t_node **current, int *cur_lowest)
 {
 	*lowest = *current;
 	*cur_lowest = (*lowest)->value;

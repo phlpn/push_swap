@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:02:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 14:11:22 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_swap_members(int *mem1, int *mem2)
 	*mem2 = tmp;
 }
 
-// Swap the first two nodes's values of the stack
+// Swap the members' values of the first two nodes of the stack
 void	ft_swap(t_stack *stack)
 {
 	ft_swap_members(&stack->head->value, &stack->head->next->value);
