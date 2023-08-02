@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/01 17:02:27 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 14:02:26 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <unistd.h>
 
 //////  D  E  B  U  G  //////
-# include <stdio.h> 
+// # include <stdio.h> 
 //////  D  E  B  U  G  //////
 
 typedef struct s_node
@@ -77,7 +77,7 @@ char		**ft_split(char const *s, char c);
 t_stack		*ft_init_stack(void);
 t_stacks	*ft_init_stacks(void);
 void		ft_linked_listify(int value, t_stack **stack);
-void		ft_link_output(char *value, t_print *stack);
+void		ft_link_print(char *value, t_print *stack);
 int			ft_op_timize(t_print *stack, char **prev, char *new);
 int			ft_min(t_stack *stack);
 int			ft_min_size(t_stack *stack, int size);
@@ -123,7 +123,7 @@ int			ft_checksorted(t_stack *stack);
 int			ft_checksorted_rev(t_stack *stack);
 int			ft_checksorted_size(t_stack *stack, int len);
 int			ft_checksorted_size_rev(t_stack *stack, int len);
-int			ft_get_min_idx(t_stacks **stacks);
+int			ft_min_idx(t_stacks **stacks);
 
 // Quick Sorting
 void		ft_sorting(t_stacks **stacks);
@@ -131,14 +131,16 @@ void		ft_sort_stack_a(t_stacks **stacks, int size);
 void		ft_sort_stack_b(t_stacks **stacks, int size);
 
 // Exit Management
-void		ft_exits(char *message);
+void		ft_exits(int code);
+
+void		ft_print_ops(t_stacks *stacks);
 
 //////////////////////  D  E  B  U  G  //////////////////////
-void		ft_print_stack(t_stack	*stack);
-void		ft_print_stack_a(t_stacks *stacks);
-void		ft_print_stack_b(t_stacks *stacks);
-void		ft_print_stacks(t_stacks *stacks);
-void		ft_subject_exemple(t_stacks **stacks);
+// void		ft_print_stack(t_stack	*stack);
+// void		ft_print_stack_a(t_stacks *stacks);
+// void		ft_print_stack_b(t_stacks *stacks);
+// void		ft_print_stacks(t_stacks *stacks);
+// void		ft_subject_exemple(t_stacks **stacks);
 //////////////////////  D  E  B  U  G  //////////////////////
 
 #endif

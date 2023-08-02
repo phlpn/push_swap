@@ -6,15 +6,15 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 09:15:35 by alexphil          #+#    #+#             */
-/*   Updated: 2023/07/20 14:35:00 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 11:21:41 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_exits(char *message)
+void	ft_exits(int code)
 {
-	write(1, message, ft_strlen(message));
-	write(1, "\n", 1);
-	exit(1);
+	if (code)
+		write(2, "Error\n", 6);
+	exit(code);
 }

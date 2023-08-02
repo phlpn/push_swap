@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:36:47 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/01 14:45:00 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 14:02:26 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ void	ft_rra(t_stacks **stacks, int print)
 {
 	ft_rrot((*stacks)->a);
 	if (print)
-		ft_link_output("rra\n", (*stacks)->print);
+		ft_link_print("rra\n", (*stacks)->print);
 }
 
 void	ft_rrb(t_stacks **stacks, int print)
 {
 	ft_rrot((*stacks)->b);
 	if (print)
-		ft_link_output("rrb\n", (*stacks)->print);
+		ft_link_print("rrb\n", (*stacks)->print);
 }
 
 void	ft_rrr(t_stacks **stacks, int print)
@@ -38,5 +38,5 @@ void	ft_rrr(t_stacks **stacks, int print)
 	ft_rra(stacks, 0);
 	ft_rrb(stacks, 0);
 	if (print)
-		ft_link_output("rrr\n", (*stacks)->print);
+		ft_link_print("rrr\n", (*stacks)->print);
 }
