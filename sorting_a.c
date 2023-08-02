@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 14:20:42 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:59:16 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 17:17:33 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,14 @@
 
 static int	ft_sort_stack_a_exits(t_stacks **stacks, int size)
 {
-	if ((*stacks)->a->len < 1 || !size)
-		return (1);
-	else if (ft_checksorted_size((*stacks)->a, size))
+	if (ft_checksorted_size((*stacks)->a, size))
 		return (1);
 	else if ((*stacks)->a->len == 3)
 		return (ft_sort3(stacks), 1);
-	else if ((*stacks)->a->len == 5)
-		return (ft_sort5(stacks), 1);
 	else if (size == 3)
 		return (ft_sort3_top(stacks), 1);
-	else if (size == 1)
-		return (1);
+	else if ((*stacks)->a->len == 5)
+		return (ft_sort5(stacks), 1);
 	else if (size == 2 || (*stacks)->a->len == 2)
 		if ((*stacks)->a->head->value > (*stacks)->a->head->next->value)
 			return (ft_sa(stacks, 1), 1);

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:36:54 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 13:19:14 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 17:24:57 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int	*ft_string_to_stack(char *s, int *size)
 	ft_correct_str_input(s);
 	*size = ft_count_numbers(s);
 	if (*size == 1)
-		ft_exits(1);
+		ft_exits(0);
 	tmp = ft_split(s, ' ');
 	if (!tmp)
 		ft_exits(1);

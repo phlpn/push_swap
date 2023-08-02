@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 14:58:24 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 15:00:19 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 17:18:30 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,9 @@
 
 static int	ft_sort_stack_b_exits(t_stacks **stacks, int size)
 {
-	if (!(*stacks)->b->len || !size)
-		return (1);
-	else if (ft_checksorted_size_rev((*stacks)->b, size))
+	if (ft_checksorted_size_rev((*stacks)->b, size))
 	{
 		while (size--)
-			ft_pa(stacks, 1);
-		return (1);
-	}
-	else if ((*stacks)->b->len == 2 || (*stacks)->b->len == 3)
-	{
-		ft_sort3_rev(stacks);
-		while ((*stacks)->b->len)
 			ft_pa(stacks, 1);
 		return (1);
 	}
@@ -35,6 +26,13 @@ static int	ft_sort_stack_b_exits(t_stacks **stacks, int size)
 			ft_sb(stacks, 1);
 		ft_pa(stacks, 1);
 		ft_pa(stacks, 1);
+		return (1);
+	}
+	else if ((*stacks)->b->len == 3)
+	{
+		ft_sort3_rev(stacks);
+		while ((*stacks)->b->len)
+			ft_pa(stacks, 1);
 		return (1);
 	}
 	return (0);
