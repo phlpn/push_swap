@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:29:21 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:02:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 16:48:43 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	ft_rot(t_stack *stack)
 
 void	ft_ra(t_stacks **stacks, int print)
 {
+	if ((*stacks)->a->head == (*stacks)->a->tail)
+		return ;
 	ft_rot((*stacks)->a);
 	if (print)
 		ft_link_print("ra\n", (*stacks)->print);
@@ -28,6 +30,8 @@ void	ft_ra(t_stacks **stacks, int print)
 
 void	ft_rb(t_stacks **stacks, int print)
 {
+	if ((*stacks)->b->head == (*stacks)->b->tail)
+		return ;
 	ft_rot((*stacks)->b);
 	if (print)
 		ft_link_print("rb\n", (*stacks)->print);
@@ -35,6 +39,9 @@ void	ft_rb(t_stacks **stacks, int print)
 
 void	ft_rr(t_stacks **stacks, int print)
 {
+	if ((*stacks)->a->head == (*stacks)->a->tail
+		|| (*stacks)->b->head == (*stacks)->b->tail)
+		return ;
 	ft_ra(stacks, 0);
 	ft_rb(stacks, 0);
 	if (print)

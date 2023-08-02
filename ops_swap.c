@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:11:22 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/02 16:45:54 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	ft_swap(t_stack *stack)
 
 void	ft_sa(t_stacks **stacks, int print)
 {
+	if ((*stacks)->a->len < 2)
+		return ;
 	ft_swap((*stacks)->a);
 	if (print)
 		ft_link_print("sa\n", (*stacks)->print);
@@ -37,6 +39,8 @@ void	ft_sa(t_stacks **stacks, int print)
 
 void	ft_sb(t_stacks **stacks, int print)
 {
+	if ((*stacks)->b->len < 2)
+		return ;
 	ft_swap((*stacks)->b);
 	if (print)
 		ft_link_print("sb\n", (*stacks)->print);
@@ -44,6 +48,8 @@ void	ft_sb(t_stacks **stacks, int print)
 
 void	ft_ss(t_stacks **stacks, int print)
 {
+	if ((*stacks)->a->len < 2 || (*stacks)->b->len < 2)
+		return ;
 	ft_sa(stacks, 0);
 	ft_sb(stacks, 0);
 	if (print)
