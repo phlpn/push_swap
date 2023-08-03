@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 15:56:48 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:01:55 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,7 +129,6 @@ char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 ////////////////////  D  E  B  U  G  //////////////////////
-// void		ft_print_stack(t_stack	*stack);
 // void		ft_print_stack_a(t_stacks *stacks);
 // void		ft_print_stack_b(t_stacks *stacks);
 // void		ft_print_stacks(t_stacks *stacks);

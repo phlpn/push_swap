@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   debug.c                                            :+:      :+:    :+:   */
+/*   utils_debug.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 15:24:58 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:02:10 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// void	ft_print_stack(t_stack	*stack)
+// static void	ft_print_stack(t_stack	*stack)
 // {
 // 	t_node	*current;
 
