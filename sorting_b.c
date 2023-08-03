@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 14:58:24 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 17:18:30 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:36:44 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_sort_stack_b(t_stacks **stacks, int size)
 		return ;
 	rev = 0;
 	mid = size / 2;
-	piv = ft_get_min_rank_within(&(*stacks)->b, size) + mid;
+	piv = ft_min_rank_within(&(*stacks)->b, size) + mid;
 	push = 0;
 	while (push < mid + size % 2)
 		ft_push_rotate_b(stacks, piv, &push, &rev);

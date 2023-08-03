@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 12:32:41 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:27:33 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,6 @@ void	ft_exits(int code)
 	if (code)
 		write(2, "Error\n", 6);
 	exit(code);
-}
-
-void	ft_sorting(t_stacks **stacks)
-{
-	if (ft_checksorted((*stacks)->a))
-		exit(0);
-	ft_sort_stack_a(stacks, (*stacks)->a->len);
 }
 
 int	main(int ac, char **av)
@@ -47,7 +40,9 @@ int	main(int ac, char **av)
 		ft_linked_listify(stack[i], &stacks->a);
 	free(stack);
 	ft_rank((*stacks).a);
-	ft_sorting(&stacks);
+	if (ft_checksorted(stacks->a))
+		ft_exits(0);
+	ft_sort_stack_a(&stacks, stacks->a->len);
 	ft_print_ops(stacks);
 	ft_exits(0);
 }

@@ -6,14 +6,14 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:02:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:56:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 // Removes the first node of a doubly circular linked list and returns its addr.
-t_node	*ft_shift(t_stack *stack)
+static t_node	*ft_shift(t_stack *stack)
 {
 	t_node	*push;
 
@@ -34,7 +34,7 @@ t_node	*ft_shift(t_stack *stack)
 }
 
 // Adds a given new node to the beginning of a doubly circular linked list
-void	ft_unshift(t_node *push, t_stack *stack)
+static void	ft_unshift(t_node *push, t_stack *stack)
 {
 	if (stack->head)
 	{	
@@ -60,7 +60,7 @@ void	ft_pa(t_stacks **stacks, int print)
 		return ;
 	ft_unshift(ft_shift((*stacks)->b), (*stacks)->a);
 	if (print)
-		ft_link_print("pa\n", (*stacks)->print);
+		ft_link_op("pa\n", (*stacks)->print);
 }
 
 void	ft_pb(t_stacks **stacks, int print)
@@ -69,5 +69,5 @@ void	ft_pb(t_stacks **stacks, int print)
 		return ;
 	ft_unshift(ft_shift((*stacks)->a), (*stacks)->b);
 	if (print)
-		ft_link_print("pb\n", (*stacks)->print);
+		ft_link_op("pb\n", (*stacks)->print);
 }

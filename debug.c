@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/10 11:28:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:03:34 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:24:58 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 // 	current = stack->head;
 // 	while (1)
 // 	{
-// 		printf("%i < %i > %i [%i]",
+// 		printf("%li < %li > %li [%li]",
 // 			current->prev->value, current->value,
 // 			current->next->value, current->rank);
 // 		if (current == stack->head && current == stack->tail)

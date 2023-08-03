@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:46:16 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:02:26 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:56:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_strcmp(char *str1, char *str2)
+static int	ft_strcmp(char *str1, char *str2)
 {
 	while (*str1 && *str2)
 	{
@@ -24,7 +24,7 @@ int	ft_strcmp(char *str1, char *str2)
 	return (*str1 == '\0' && *str2 == '\0');
 }
 
-void	ft_removelast(t_print *stack)
+static void	ft_removelast(t_print *stack)
 {
 	t_op	*current;
 
@@ -35,7 +35,7 @@ void	ft_removelast(t_print *stack)
 	current->next = NULL;
 }
 
-int	ft_op_timize(t_print *stack, char **prev, char *new)
+static int	ft_op_timize(t_print *stack, char **prev, char *new)
 {
 	if ((ft_strcmp(*prev, "sa\n") && ft_strcmp(new, "sb\n"))
 		|| (ft_strcmp(*prev, "sb\n") && ft_strcmp(new, "sa\n")))
@@ -56,7 +56,7 @@ int	ft_op_timize(t_print *stack, char **prev, char *new)
 	return (0);
 }
 
-void	ft_link_print(char *value, t_print *stack)
+void	ft_link_op(char *value, t_print *stack)
 {
 	t_op	*new_op;
 	t_op	*current;

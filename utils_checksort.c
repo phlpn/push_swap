@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_checksorted.c                                :+:      :+:    :+:   */
+/*   utils_checksort.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:33:31 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:02:58 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:41:53 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ int	ft_checksorted(t_stack *stack)
 	return (1);
 }
 
-int	ft_checksorted_size(t_stack *stack, int len)
+int	ft_checksorted_size(t_stack *stack, int size)
 {
 	t_node	*current;
 
-	if (len == 1 || stack->len == 1)
+	if (size == 1 || stack->len == 1)
 		return (1);
 	current = stack->head->next;
-	while (--len)
+	while (--size)
 	{
 		if (current->value < current->prev->value)
 			return (0);
@@ -62,12 +62,12 @@ int	ft_checksorted_rev(t_stack *stack)
 	return (1);
 }
 
-int	ft_checksorted_size_rev(t_stack *stack, int len)
+int	ft_checksorted_size_rev(t_stack *stack, int size)
 {
 	t_node	*current;
 
 	current = stack->head->next;
-	while (--len)
+	while (--size)
 	{
 		if (current->value > current->prev->value)
 			return (0);

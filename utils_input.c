@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:36:54 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 17:24:57 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 15:42:59 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,23 @@ int	ft_correct_str_input(char *s)
 			ft_exits(1);
 	}
 	return (1);
+}
+
+int	ft_count_numbers(char *s)
+{
+	int	x;
+
+	x = 0;
+	while (*s)
+	{
+		if (ft_is_digit(*s))
+			x++;
+		while (ft_is_digit(*s))
+			s++;
+		while (*s == ' ' || *s == '-')
+			s++;
+	}
+	return (x);
 }
 
 int	ft_has_doubles(int *stack, int size)
@@ -99,21 +116,4 @@ int	*ft_args_to_stack(int ac, char **av, int *size)
 	if (overflow)
 		ft_exits(1);
 	return (stack);
-}
-
-int	ft_count_numbers(char *s)
-{
-	int	x;
-
-	x = 0;
-	while (*s)
-	{
-		if (ft_is_digit(*s))
-			x++;
-		while (ft_is_digit(*s))
-			s++;
-		while (*s == ' ' || *s == '-')
-			s++;
-	}
-	return (x);
 }
