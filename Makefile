@@ -16,7 +16,7 @@ SRCS = 	push_swap.c \
 		utils_minmax.c \
 		utils_sort.c \
 		utils_split.c \
-		utils_misc.c 
+		utils_misc.c \
 		utils_debug.c \
 
 OBJ_DIR = Objs
