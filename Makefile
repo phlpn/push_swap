@@ -2,7 +2,6 @@ NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I.
 SRCS = debug.c \
-		exits.c \
 		ops_push.c \
 		ops_rotate.c \
 		ops_rrotate.c \
@@ -20,7 +19,7 @@ SRCS = debug.c \
 		utils_split.c \
 		utils.c
 
-OBJ_DIR = OBJS
+OBJ_DIR = Objs
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
 
 all: $(NAME)

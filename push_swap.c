@@ -6,16 +6,23 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:15:31 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 12:32:41 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+void	ft_exits(int code)
+{
+	if (code)
+		write(2, "Error\n", 6);
+	exit(code);
+}
+
 void	ft_sorting(t_stacks **stacks)
 {
 	if (ft_checksorted((*stacks)->a))
-		exit(1);
+		exit(0);
 	ft_sort_stack_a(stacks, (*stacks)->a->len);
 }
 
