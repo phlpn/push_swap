@@ -6,12 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 14:04:34 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:49:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Sort a given doubly circular linked list of 3 elements using push_swap ops
 void	ft_sort3(t_stacks **stacks)
 {
 	t_stack	*a;
@@ -29,6 +30,7 @@ void	ft_sort3(t_stacks **stacks)
 		ft_sa(stacks, 1);
 }
 
+// Sort the top 3 elements of a given doubly circular linked list using p_s ops
 void	ft_sort3_top(t_stacks **stacks)
 {
 	t_node	*first;
@@ -52,6 +54,7 @@ void	ft_sort3_top(t_stacks **stacks)
 		ft_sa(stacks, 1);
 }
 
+// Similar behaviour as ft_sort3 but achieving reversed order sorting
 void	ft_sort3_rev(t_stacks **stacks)
 {
 	t_stack	*b;
@@ -69,6 +72,7 @@ void	ft_sort3_rev(t_stacks **stacks)
 		ft_sb(stacks, 1);
 }
 
+// Sort a given doubly circular linked list of 5 elements using push_swap ops
 void	ft_sort5(t_stacks **stacks)
 {
 	while ((*stacks)->a->len > 3)

@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.c                                            :+:      :+:    :+:   */
+/*   utils_misc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 08:35:42 by alexphil          #+#    #+#             */
-/*   Updated: 2023/06/06 14:58:10 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:46:47 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Check if a given character is digital according to the ASCII table
 int	ft_is_digit(char c)
 {
 	return (c >= '0' && c <= '9');
 }
 
+// Return the length of given string
 size_t	ft_strlen(const char *s)
 {
 	size_t	len;
@@ -27,6 +29,7 @@ size_t	ft_strlen(const char *s)
 	return (len);
 }
 
+// Return the integer of a given argument while checking for overflow
 int	ft_atoi(const char	*str, int *overflow)
 {
 	unsigned int		i;
@@ -48,6 +51,7 @@ int	ft_atoi(const char	*str, int *overflow)
 	return ((int)res * sign);
 }
 
+// Return a memory allocated duplicate of a given string
 char	*ft_strdup(const char *s1)
 {
 	size_t	len;
@@ -61,6 +65,7 @@ char	*ft_strdup(const char *s1)
 	return (dup);
 }
 
+// Copy a given source string to a given destination string to a given length
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

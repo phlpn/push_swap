@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/18 14:20:42 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:13:53 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:21:36 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static void	ft_push_rotate_a(t_stacks **stacks, int piv, int *push, int *rev)
 	}
 }
 
-// Recursive Quick Sort using stack A as the left side of the pivot
+// Recursive Quick Sort using stack A as the "left side" of the pivot
 void	ft_sort_stack_a(t_stacks **stacks, int size)
 {
 	int	mid;

@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   split.c                                            :+:      :+:    :+:   */
+/*   utils_split.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 08:37:39 by alexphil          #+#    #+#             */
-/*   Updated: 2023/06/06 11:18:03 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:57:52 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Extract a substring from a given string, using a given start and length
 static char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_len;
@@ -31,6 +32,7 @@ static char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub);
 }
 
+// Return the number of "words" between separators across the string
 static size_t	nb_nbr(char const *s, char c)
 {
 	size_t	i;
@@ -52,6 +54,7 @@ static size_t	nb_nbr(char const *s, char c)
 	return (nb);
 }
 
+// Return the number of characters between separators
 static size_t	ln_nbr(char const *s, char c, size_t i)
 {
 	size_t	len;
@@ -65,6 +68,7 @@ static size_t	ln_nbr(char const *s, char c, size_t i)
 	return (len);
 }
 
+// Free the 2D array in case of malloc failure
 static void	*ft_free(char **strs, size_t j)
 {
 	while (j-- > 0)
@@ -73,6 +77,7 @@ static void	*ft_free(char **strs, size_t j)
 	return (NULL);
 }
 
+// Split a given string using a given character and return it in an array
 char	**ft_split(char const *s, char c)
 {
 	ssize_t	size;

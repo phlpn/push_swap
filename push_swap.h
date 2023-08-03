@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 16:51:42 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:54:28 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ typedef struct s_node
 	long int		rank;
 }	t_node;
 
-// Doubly circular linked list defintion used for stacks A and B
+// Doubly circular linked list holder defintion used for stacks A and B
 typedef struct s_stack
 {
 	struct s_node	*head;
@@ -45,7 +45,7 @@ typedef struct s_op
 	char			*value;
 }	t_op;
 
-// Basic linked list defintion used for printing ops
+// Basic linked list holder defintion used for printing ops
 typedef struct s_print
 {
 	struct s_op		*head;
@@ -91,7 +91,6 @@ int			ft_checksorted_size_rev(t_stack *stack, int size);
 // Min Max Utils
 int			ft_min(t_stack *stack);
 int			ft_min_size(t_stack *stack, int size);
-int			ft_min_idx(t_stacks **stacks);
 int			ft_max(t_stack *stack);
 int			ft_max_size(t_stack *stack, int size);
 

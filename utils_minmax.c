@@ -6,12 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:31:16 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/02 13:59:35 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:41:52 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Return the mininum value from in a given circular doubly linked list
 int	ft_min(t_stack *stack)
 {
 	t_node	*current;
@@ -30,6 +31,7 @@ int	ft_min(t_stack *stack)
 	return (min);
 }
 
+// Same behaviour as ft_min but within a range
 int	ft_min_size(t_stack *stack, int size)
 {
 	t_node	*current;
@@ -46,32 +48,7 @@ int	ft_min_size(t_stack *stack, int size)
 	return (min);
 }
 
-int	ft_min_idx(t_stacks **stacks)
-{
-	t_node	*current;
-	int		i;
-	int		idx;
-	int		min;
-
-	i = 0;
-	idx = 0;
-	current = (*stacks)->a->head;
-	min = current->value;
-	while (1)
-	{
-		current = current->next;
-		i++;
-		if (current->value < min)
-		{
-			idx = i;
-			min = current->value;
-		}
-		if (current == (*stacks)->a->tail)
-			break ;
-	}
-	return (idx);
-}
-
+// Return the maximal value from in a given circular doubly linked list
 int	ft_max(t_stack *stack)
 {
 	t_node	*current;
@@ -90,6 +67,7 @@ int	ft_max(t_stack *stack)
 	return (max);
 }
 
+// Same behaviour as ft_max but within a range
 int	ft_max_size(t_stack *stack, int size)
 {
 	t_node	*current;
