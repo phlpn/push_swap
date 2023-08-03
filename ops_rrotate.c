@@ -6,19 +6,20 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/06 14:36:47 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 15:56:48 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:30:45 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Reverse rotate the stack by one
+// Last element of the given doubly circular linked list becomes the first one
 static void	ft_rrot(t_stack *stack)
 {
 	stack->head = stack->head->prev;
 	stack->tail = stack->tail->prev;
 }
 
+// Apply ft_rrot to stack A
 void	ft_rra(t_stacks **stacks, int print)
 {
 	if ((*stacks)->a->head == (*stacks)->a->tail)
@@ -28,6 +29,7 @@ void	ft_rra(t_stacks **stacks, int print)
 		ft_link_op("rra\n", (*stacks)->print);
 }
 
+// Apply ft_rrot to stack B
 void	ft_rrb(t_stacks **stacks, int print)
 {
 	if ((*stacks)->b->head == (*stacks)->b->tail)
@@ -37,6 +39,7 @@ void	ft_rrb(t_stacks **stacks, int print)
 		ft_link_op("rrb\n", (*stacks)->print);
 }
 
+// Apply ft_rrot to both the stack A and B
 void	ft_rrr(t_stacks **stacks, int print)
 {
 	if ((*stacks)->a->head == (*stacks)->a->tail

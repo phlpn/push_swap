@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_print.c                                      :+:      :+:    :+:   */
+/*   printing.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:46:16 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 15:56:48 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:41:58 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Check if two given strings are the same and return 1 if true 
 static int	ft_strcmp(char *str1, char *str2)
 {
 	while (*str1 && *str2)
@@ -24,6 +25,7 @@ static int	ft_strcmp(char *str1, char *str2)
 	return (*str1 == '\0' && *str2 == '\0');
 }
 
+// Remove the last node from a given basic head/next/value linked list
 static void	ft_removelast(t_print *stack)
 {
 	t_op	*current;
@@ -35,6 +37,7 @@ static void	ft_removelast(t_print *stack)
 	current->next = NULL;
 }
 
+// Optimize print ops by removing ops that would be cancelling each other
 static int	ft_op_timize(t_print *stack, char **prev, char *new)
 {
 	if ((ft_strcmp(*prev, "sa\n") && ft_strcmp(new, "sb\n"))
@@ -56,6 +59,7 @@ static int	ft_op_timize(t_print *stack, char **prev, char *new)
 	return (0);
 }
 
+// Add op to the print linked list if it doesn't go against ft_op_timize rules
 void	ft_link_op(char *value, t_print *stack)
 {
 	t_op	*new_op;
@@ -85,6 +89,7 @@ void	ft_link_op(char *value, t_print *stack)
 	new_op->next = NULL;
 }
 
+// Print ops to terminal in standard output 
 void	ft_print_ops(t_stacks *stacks)
 {
 	t_op	*current;
