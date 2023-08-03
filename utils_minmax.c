@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 13:31:16 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:41:52 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:03:53 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_min(t_stack *stack)
 	return (min);
 }
 
-// Same behaviour as ft_min but within a range
+// Same behavior as ft_min but within a range
 int	ft_min_size(t_stack *stack, int size)
 {
 	t_node	*current;
@@ -67,7 +67,7 @@ int	ft_max(t_stack *stack)
 	return (max);
 }
 
-// Same behaviour as ft_max but within a range
+// Same behavior as ft_max but within a range
 int	ft_max_size(t_stack *stack, int size)
 {
 	t_node	*current;

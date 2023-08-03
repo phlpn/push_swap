@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/17 10:51:51 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:49:48 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:03:53 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void	ft_sort3_top(t_stacks **stacks)
 		ft_sa(stacks, 1);
 }
 
-// Similar behaviour as ft_sort3 but achieving reversed order sorting
+// Similar behavior as ft_sort3 but achieving reversed order sorting
 void	ft_sort3_rev(t_stacks **stacks)
 {
 	t_stack	*b;

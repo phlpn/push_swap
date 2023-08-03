@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 14:58:24 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:21:44 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:02:37 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ static int	ft_sort_stack_b_exits(t_stacks **stacks, int size)
 	return (0);
 }
 
-// Push to A or rotate depending on if the value is < or >= than the pivot
+// Push to A or Rotate depending on if the value is < or >= than the pivot
 static void	ft_push_rotate_b(t_stacks **stacks, int piv, int *push, int *rev)
 {
 	if ((*stacks)->b->head->rank >= piv)

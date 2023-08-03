@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 08:37:39 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:57:52 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:06:11 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static size_t	nb_nbr(char const *s, char c)
 	return (nb);
 }
 
-// Return the number of characters between separators
+// Return the number of characters from the current "word"
 static size_t	ln_nbr(char const *s, char c, size_t i)
 {
 	size_t	len;

@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 08:35:42 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:46:47 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 18:05:25 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Check if a given character is digital according to the ASCII table
+// Check if a given character is a digital reprensentation according to ASCII
 int	ft_is_digit(char c)
 {
 	return (c >= '0' && c <= '9');
