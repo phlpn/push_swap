@@ -1,23 +1,23 @@
 NAME = push_swap
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -I.
-SRCS = debug.c \
+SRCS = 	push_swap.c \
+		ops_swap.c \
 		ops_push.c \
 		ops_rotate.c \
 		ops_rrotate.c \
-		ops_swap.c \
-		push_swap.c \
 		ranking.c \
 		sorting_a.c \
 		sorting_b.c \
-		utils_checksort.c \
+		printing.c \
 		utils_input.c \
 		utils_list.c \
+		utils_checksort.c \
 		utils_minmax.c \
-		utils_print.c \
 		utils_sort.c \
 		utils_split.c \
-		utils.c
+		utils_misc.c 
+		utils_debug.c \
 
 OBJ_DIR = Objs
 OBJS = $(addprefix $(OBJ_DIR)/,$(SRCS:.c=.o))
