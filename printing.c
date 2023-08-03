@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:46:16 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 16:41:58 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:56:51 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Check if two given strings are the same and return 1 if true 
+// Check if two given strings are the same 
 static int	ft_strcmp(char *str1, char *str2)
 {
 	while (*str1 && *str2)
@@ -59,7 +59,7 @@ static int	ft_op_timize(t_print *stack, char **prev, char *new)
 	return (0);
 }
 
-// Add op to the print linked list if it doesn't go against ft_op_timize rules
+// Add op to the print list if it doesn't go against ft_op_timize rules
 void	ft_link_op(char *value, t_print *stack)
 {
 	t_op	*new_op;
@@ -89,7 +89,7 @@ void	ft_link_op(char *value, t_print *stack)
 	new_op->next = NULL;
 }
 
-// Print ops to terminal in standard output 
+// Print ops list in standard output 
 void	ft_print_ops(t_stacks *stacks)
 {
 	t_op	*current;

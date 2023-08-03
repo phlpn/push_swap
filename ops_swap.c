@@ -6,13 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 11:02:07 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 16:31:05 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:53:50 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// Swap the the values of the two given members
+// Swap the the values of two given stack members
 static void	ft_swap_members(long int *mem1, long int *mem2)
 {
 	int	tmp;

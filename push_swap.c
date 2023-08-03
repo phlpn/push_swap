@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 16:42:23 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 16:59:52 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	ft_exits(int code)
 		write(2, "Error\n", 6);
 	exit(code);
 }
-
 
 int	main(int ac, char **av)
 {

@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 12:56:34 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 15:36:44 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:04:40 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ static void	ft_rank_helper(t_node **lowest, t_node **current,
 	*cur_lowest = (*lowest)->value;
 }
 
+// Pre-rank the numbers (0 to n) from a given doubly circular linked list
 void	ft_rank(t_stack *stack)
 {
 	t_node		*current;
@@ -48,6 +49,7 @@ void	ft_rank(t_stack *stack)
 	}
 }
 
+// Return the lowest rank within a given range from a given stack
 int	ft_min_rank_within(t_stack **stack, int size)
 {
 	t_node	*current;

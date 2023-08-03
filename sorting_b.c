@@ -6,12 +6,13 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 14:58:24 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 15:36:44 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/03 17:13:41 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// Exits condition to return from sorting stack B recursion
 static int	ft_sort_stack_b_exits(t_stacks **stacks, int size)
 {
 	if (ft_checksorted_size_rev((*stacks)->b, size))
@@ -38,6 +39,7 @@ static int	ft_sort_stack_b_exits(t_stacks **stacks, int size)
 	return (0);
 }
 
+// Push to A or rotate depending on if the value is < or >= than the pivot
 static void	ft_push_rotate_b(t_stacks **stacks, int piv, int *push, int *rev)
 {
 	if ((*stacks)->b->head->rank >= piv)
@@ -52,6 +54,7 @@ static void	ft_push_rotate_b(t_stacks **stacks, int piv, int *push, int *rev)
 	}
 }
 
+// Recursive Quick Sort using stack B as the right side of the pivot
 void	ft_sort_stack_b(t_stacks **stacks, int size)
 {
 	int	mid;
