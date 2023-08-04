@@ -1,18 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   checker_bonus.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/04 15:39:30 by alexphil         ###   ########.fr       */
+/*   Created: 2023/08/04 14:43:51 by alexphil          #+#    #+#             */
+/*   Updated: 2023/08/04 15:51:39 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "checker_bonus.h"
 
-// Input Check > Input Process > Pre Ranking > Sorting > Printing Ops > Exit
 int	main(int ac, char **av)
 {
 	t_stacks	*stacks;
@@ -34,9 +33,7 @@ int	main(int ac, char **av)
 		ft_linked_listify(stack[i], &stacks->a);
 	free(stack);
 	if (ft_checksorted(stacks->a))
-		ft_exits(EXIT_SUCCESS);
-	ft_rank((*stacks).a);
-	ft_sort_stack_a(&stacks, stacks->a->len);
-	ft_print_ops(stacks);
-	ft_exits(EXIT_SUCCESS);
+		ft_exits(OK);
+	else
+		ft_exits(KO);
 }

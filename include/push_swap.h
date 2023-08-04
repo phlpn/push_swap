@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:39:00 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:54:28 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/04 15:01:48 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ typedef struct s_stack
 	int				len;
 }	t_stack;
 
-// Basic linked list's node defintion used for printing ops
+// Basic linked list's node definition used for ops printing
 typedef struct s_op
 {
 	struct s_op		*next;
 	char			*value;
 }	t_op;
 
-// Basic linked list holder defintion used for printing ops
+// Basic linked list holder defintion used for ops printing
 typedef struct s_print
 {
 	struct s_op		*head;
@@ -58,10 +58,6 @@ typedef struct s_stacks
 	struct s_stack	*b;
 	struct s_print	*print;
 }	t_stacks;
-
-// Main
-int			main(int ac, char **av);
-void		ft_exits(int code);
 
 // Input Utils
 int			ft_correct_str_input(char *s);
@@ -130,6 +126,9 @@ size_t		ft_strlen(const char *s);
 int			ft_atoi(const char	*str, int *overflow);
 char		*ft_strdup(const char *s1);
 size_t		ft_strlcpy(char *dst, const char *src, size_t dstsize);
+
+// Exits Management
+void		ft_exits(int code);
 
 ////////////////////  D  E  B  U  G  //////////////////////
 // void		ft_print_stack_a(t_stacks *stacks);
