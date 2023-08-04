@@ -7,7 +7,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -Iinclude
 
 # Directories
-INCLUDE_DIR = include
+# INCLUDE_DIR = include
 SRC_DIR = src
 BNS_DIR = $(SRC_DIR)/bonus
 BUILD_DIR = build
@@ -24,6 +24,7 @@ CMN_FILES = ops_push.c \
 			utils_list.c \
 			utils_split.c \
 			printing.c \
+			exits_mgmt.c \
 			utils_debug.c 
 
 SRC_FILES =	push_swap.c \
@@ -31,14 +32,12 @@ SRC_FILES =	push_swap.c \
 			sorting_a.c \
 			sorting_b.c \
 			utils_minmax.c \
-			exits_mgmt.c \
 			utils_sort.c
 
-BNS_FILES = checker_bonus.c \
-			exits_mgmt.c
+BNS_FILES = checker_bonus.c 
 
 
-# Define the path of the SRC_FILES
+# Define the path of the sources files
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES)) 
 CMN_SRCS = $(addprefix $(SRC_DIR)/,$(CMN_FILES)) 
 BNS_SRCS = $(addprefix $(BNS_DIR)/,$(BNS_FILES))
@@ -49,7 +48,7 @@ CMN_OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(CMN_SRCS))
 BNS_OBJS = $(patsubst $(BNS_DIR)/%.c,$(BUILD_DIR)/%.o,$(BNS_SRCS))
 
 # Rule to build the executables
-$(NAME): $(OBJS) $(CMN_SRCS)
+$(NAME): $(OBJS) $(CMN_OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 $(BNS_NAME): $(BNS_OBJS) $(CMN_OBJS)
