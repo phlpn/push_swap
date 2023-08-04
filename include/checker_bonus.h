@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/04 14:45:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/04 16:00:15 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/04 18:23:14 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,7 @@
 
 # include "push_swap.h"
 
-# define OK 1
-# define KO -1
-
-// Exits Management
-void	ft_exits(int code);
+# define OK 10
+# define KO -10
 
 #endif
