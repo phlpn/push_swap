@@ -7,7 +7,6 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror -Iinclude
 
 # Directories
-# INCLUDE_DIR = include
 SRC_DIR = src
 BNS_DIR = $(SRC_DIR)/bonus
 BUILD_DIR = build
