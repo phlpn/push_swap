@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/02 11:46:16 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 16:56:51 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/04 13:54:40 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	ft_link_op(char *value, t_print *stack)
 	}
 	new_op = malloc(sizeof(t_node));
 	if (!new_op)
-		ft_exits(1);
+		ft_exits(EXIT_FAILURE);
 	new_op->value = value;
 	if (!stack->head)
 		stack->head = new_op;

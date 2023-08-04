@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/05 09:24:10 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 17:34:04 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/04 13:54:40 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static t_stack	*ft_init_stack(void)
 
 	new_stack = malloc(sizeof(t_stack));
 	if (!new_stack)
-		ft_exits(1);
+		ft_exits(EXIT_FAILURE);
 	new_stack->head = NULL;
 	new_stack->tail = NULL;
 	new_stack->len = 0;
@@ -33,7 +33,7 @@ static t_print	*ft_init_print(void)
 
 	print = malloc(sizeof(t_print));
 	if (!print)
-		ft_exits(1);
+		ft_exits(EXIT_FAILURE);
 	print->head = NULL;
 	return (print);
 }
@@ -45,7 +45,7 @@ t_stacks	*ft_init_stacks(void)
 
 	stacks = malloc(sizeof(t_stacks));
 	if (!stacks)
-		ft_exits(1);
+		ft_exits(EXIT_FAILURE);
 	stacks->a = ft_init_stack();
 	stacks->b = ft_init_stack();
 	stacks->print = ft_init_print();
@@ -59,7 +59,7 @@ void	ft_linked_listify(int value, t_stack **stack)
 
 	new_node = malloc(sizeof(t_node));
 	if (!new_node)
-		ft_exits(1);
+		ft_exits(EXIT_FAILURE);
 	new_node->value = value;
 	if (!(*stack)->head)
 	{

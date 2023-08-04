@@ -6,7 +6,7 @@
 /*   By: alexphil <alexphil@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/30 13:43:08 by alexphil          #+#    #+#             */
-/*   Updated: 2023/08/03 16:59:52 by alexphil         ###   ########.fr       */
+/*   Updated: 2023/08/04 14:21:19 by alexphil         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ void	ft_exits(int code)
 	exit(code);
 }
 
+// Input Check > Input Process > Pre Ranking > Sorting > Printing Ops > Exit
 int	main(int ac, char **av)
 {
 	t_stacks	*stacks;
@@ -34,16 +35,16 @@ int	main(int ac, char **av)
 	else
 		stack = ft_args_to_stack(ac, &*av, &size);
 	if (ft_has_doubles(stack, size))
-		ft_exits(1);
+		ft_exits(EXIT_FAILURE);
 	stacks = ft_init_stacks();
 	i = -1;
 	while (++i < size)
 		ft_linked_listify(stack[i], &stacks->a);
 	free(stack);
-	ft_rank((*stacks).a);
 	if (ft_checksorted(stacks->a))
-		ft_exits(0);
+		ft_exits(EXIT_SUCCESS);
+	ft_rank((*stacks).a);
 	ft_sort_stack_a(&stacks, stacks->a->len);
 	ft_print_ops(stacks);
-	ft_exits(0);
+	ft_exits(EXIT_SUCCESS);
 }
