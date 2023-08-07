@@ -1,19 +1,17 @@
 # Final executable name
 NAME = push_swap
-BNS_NAME = checker
 
 # Compiler and compiler flags
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -Iinclude
+DFLAGS = -g -DDEBUG
 
 # Directories
 SRC_DIR = src
-BNS_DIR = $(SRC_DIR)/bonus
 BUILD_DIR = build
 
 # Define the source files
-
-CMN_FILES = ops_push.c \
+SRC_FILES =	ops_push.c \
 			ops_rotate.c \
 			ops_rrotate.c \
 			ops_swap.c \
@@ -24,33 +22,22 @@ CMN_FILES = ops_push.c \
 			utils_split.c \
 			printing.c \
 			exits_mgmt.c \
-			utils_debug.c 
-
-SRC_FILES =	push_swap.c \
+			utils_debug.c \
+			push_swap.c \
 			ranking.c \
 			sorting_a.c \
 			sorting_b.c \
 			utils_minmax.c \
 			utils_sort.c
 
-BNS_FILES = checker_bonus.c 
-
-
 # Define the path of the sources files
 SRCS = $(addprefix $(SRC_DIR)/,$(SRC_FILES)) 
-CMN_SRCS = $(addprefix $(SRC_DIR)/,$(CMN_FILES)) 
-BNS_SRCS = $(addprefix $(BNS_DIR)/,$(BNS_FILES))
 
 # Derive object file names from .c files in the build directory
 OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(SRCS))
-CMN_OBJS = $(patsubst $(SRC_DIR)/%.c,$(BUILD_DIR)/%.o,$(CMN_SRCS))
-BNS_OBJS = $(patsubst $(BNS_DIR)/%.c,$(BUILD_DIR)/%.o,$(BNS_SRCS))
 
 # Rule to build the executables
-$(NAME): $(OBJS) $(CMN_OBJS)
-	$(CC) $(CFLAGS) -o $@ $^
-
-$(BNS_NAME): $(BNS_OBJS) $(CMN_OBJS)
+$(NAME): $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $^
 
 # Rule to build object files from .c files
@@ -58,15 +45,8 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.c
 	mkdir -p $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(BUILD_DIR)/%.o: $(BNS_DIR)/%.c
-	mkdir -p $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c $< -o $@
-
 # Phony target to build the main executable
 all: $(NAME)
-
-# Phony target to build the bonus executable
-bonus: $(BNS_NAME) 
 
 # Phony target to clean generated files
 clean:
@@ -74,10 +54,14 @@ clean:
 
 # Phony target to remove the executables and object files
 fclean: clean
-	rm -f $(NAME) $(BNS_NAME)
+	rm -f $(NAME)
 
 # Phony target to perform a full re-build
 re: fclean all
+
+# Rule to build with debug flags
+debug: CFLAGS += $(DEBUG_CFLAGS)
+debug: all
 
 .SILENT:
 .PHONY: all bonus clean fclean re
